@@ -1,0 +1,670 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathtools}
+\usepackage{hyperref}
+\usepackage{doi}
+\usepackage{geometry}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{xcolor}
+
+\geometry{margin=2.5cm}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  citecolor=black,
+  urlcolor=black
+}
+
+\theoremstyle{definition}
+\newtheorem{remark}{Remark}
+\newtheorem{definition}{Definition}
+
+\newcommand{\Heis}{\mathrm{Heis}}
+\newcommand{\SU}{\mathrm{SU}}
+\newcommand{\su}{\mathfrak{su}}
+\newcommand{\BFS}{\mathrm{BFS}}
+\newcommand{\BI}{\mathrm{BI}}
+\newcommand{\Cay}{\mathrm{Cay}}
+\newcommand{\End}{\mathrm{End}}
+\newcommand{\Sym}{\mathrm{Sym}}
+\renewcommand{\Im}{\mathrm{Im}\,}
+\newcommand{\dimpair}{\delta_{\mathrm{pair}}}
+\newcommand{\betastar}{\beta^*}
+\newcommand{\cchi}{c_\chi}
+\newcommand{\nobs}{n^{\mathrm{obs}}_3}
+\newcommand{\spair}{\sigma^{\mathrm{can}}_{\mathrm{pair}}}
+
+\title{The Spectral Admissibility Sub-Programme\\[0.4em]
+\large Presentation Note 1}
+
+\author{J\'{e}r\^{o}me Beau\\[0.3em]
+\small Independent Researcher\\
+\small \texttt{jerome.beau@cosmochrony.org}}
+
+\date{2026}
+
+\begin{document}
+
+  \maketitle
+
+  \begin{abstract}
+    The spectral admissibility sub-programme of the Cosmochrony corpus addresses a single
+    central question: which spectral sectors of the Weil representation of
+    $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ survive the Born--Infeld bounded-flux constraint?
+    The answer organises the entire O-series (papers O1--O32 and five precursor papers)
+    into a logically closed derivation chain:
+    \[
+      \text{bounded flux}
+      \;\Longrightarrow\;
+      \text{admissibility envelope}
+      \;\Longrightarrow\;
+      \text{Weil-sector capacity}
+      \;\Longrightarrow\;
+      \dimpair
+      \;\Longrightarrow\;
+      \betastar \approx 0.126.
+    \]
+    This note maps the constituent papers, identifies four internal phases, records the
+    status of every result as proved, structural, or open, and states the two remaining open
+    deliverables: the pointwise analytical proof of hypothesis~$[\mathrm{H\text{-}color}]$
+    (partially resolved at three levels in O32) and the extension of the numerical campaign
+    to $q = 401$.
+  \end{abstract}
+
+  \medskip
+  \noindent\textbf{Keywords.}
+  spectral admissibility; Born--Infeld constraint; Weil representation; Heisenberg group;
+  pair observable; capacity exponent; lepton mass hierarchy; SU(3); colour triplet;
+  non-injective projection; presentation note.
+
+  \newpage
+  \tableofcontents
+
+  \newpage
+
+  \section{Motivation and Central Question}
+    \label{sec:motivation}
+
+    The spectral admissibility sub-programme answers the following question.
+
+    \medskip
+    \noindent\textit{Central question.} The non-injective projection $\Pi$ of the Cosmochrony
+    framework acts on the Weil representation of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$, decomposed
+    into irreducible blocks $V_c$ indexed by characters $c \in (\mathbb{Z}/q\mathbb{Z})^\times$.
+    The Born--Infeld saturation constraint bounds the projective flux carried by each mode:
+    $A_n \leq A^{\max}_n := \cchi/\sqrt{\lambda_n}$, where $\lambda_n$ is the Laplacian
+    eigenvalue at BFS depth $n$ and $\cchi$ is the BI saturation constant.
+    \textit{Which combinations of Weil sectors remain admissible under this constraint, and
+    what capacity exponent $\dimpair$ do they carry?}
+
+    \medskip
+    The practical importance of this question is that $\dimpair$ governs the cascade exponent
+    $\betastar$ via the structural relation $\betastar \approx 1/(\dimpair + \tfrac{1}{2})$
+    established in the O-series.
+    The value $\betastar \approx 0.126$ matches the phenomenological window
+    $\betastar \in (0.09, 0.13)$ derived from the charged-lepton mass ratios $m_e : m_\mu : m_\tau$,
+    making this sub-programme the primary quantitative connection between the projective
+    framework and Standard Model observables.
+
+    \medskip
+    The sub-programme is also the hardest to navigate: it spans over thirty papers written
+    over a period of successive obstruction identifications and resolutions.
+    This note is intended as a structured entry point, not a summary of results.
+
+  \section{Position in the Cosmochrony Programme}
+    \label{sec:position}
+
+    The Cosmochrony corpus is organised into three branches.
+    Branch~I establishes the axiomatic primitive: four axioms (A1--A4) suffice to derive
+    $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ and its Weil representation as
+    theorems~\cite{Beau2026m,Beau2026l,Beau2026HeisenbergStructure}.
+    Branch~II is the spectral admissibility sub-programme (this note).
+    Branch~III derives quantum mechanics, spacetime geometry, gauge structure, and
+    fermionic matter from Branch~I axioms and Branch~II spectral data.
+
+    \medskip
+    The spectral admissibility sub-programme therefore occupies a pivotal position: it is
+    the \emph{computational engine} of the corpus.
+    It takes the algebraic output of Branch~I (the Weil representation and its decomposition
+    into irreducible blocks) and produces the two inputs that Branch~III depends on:
+    \begin{enumerate}
+      \item the identification of the admissible sector as the spin-$\tfrac{1}{2}$ representation
+      of $\SU(2)$ embedded via the admissibility thread $Q_8 \subset 2I \subset \SU(2)$;
+      \item the numerical value $\betastar \approx 0.126$ and its representation-theoretic
+      interpretation as the scaling exponent of Hilbert--Schmidt norm growth along trajectories
+      in the minimal admissible non-abelian sector $\su(2)$.
+    \end{enumerate}
+
+    \begin{remark}[Vocabulary note]
+Throughout this note, the term \emph{admissibility constraint} replaces the earlier
+``relaxation'' vocabulary of the preliminary Cosmochrony formulation.
+The substrate $\chi$ is static: no substrate dynamics or relaxation mechanism is postulated
+at the foundational level.
+Observable evolution is an induced ordering of admissible projections, not a dynamics of
+$\chi$ itself.
+    \end{remark}
+
+  \section{Logical Chain of the Sub-Programme}
+    \label{sec:chain}
+
+    The sub-programme is organised around the following derivation chain.
+
+    \begin{equation}
+      \label{eq:chain}
+      \underbrace{\cchi}_{\text{BI saturation}}
+      \;\Longrightarrow\;
+      \underbrace{A^{\max}_n = \cchi/\sqrt{\lambda_n}}_{\text{admissibility envelope}}
+      \;\Longrightarrow\;
+      \underbrace{\spair(n)}_{\text{pair capacity}}
+      \;\Longrightarrow\;
+      \underbrace{\dimpair}_{\text{capacity exponent}}
+      \;\Longrightarrow\;
+      \underbrace{\betastar \approx 0.126}_{\text{cascade exponent}}.
+    \end{equation}
+
+    Each arrow in~\eqref{eq:chain} corresponds to a distinct analytical or numerical
+    sub-problem, resolved at a different stage of the sub-programme.
+    The chain is \emph{unconditional} with respect to the fibre structure of $\Pi$
+    (O24,~\cite{Beau2026a28}), meaning that no free parameter is adjusted to produce
+    $\betastar$.
+    The sole remaining conditionality concerns the extension of the SU(3) sector:
+    this requires hypothesis~$[\mathrm{H\text{-}color}]$ (Section~\ref{sec:open}).
+
+    \medskip
+    Three structural facts underlie the chain and should not be confused.
+
+    \begin{enumerate}
+      \item The \emph{parity involution} $c \leftrightarrow q - c$, derived from Born--Infeld
+      evenness in O18~\cite{Beau2026a22}, is the structural origin of the pair observable
+      $\spair(n) = \sigma_c(n) \cdot \sigma_{q-c}(n)$.
+      The factor-of-two relation $\dimpair = 2\delta_c$ is a consequence of this fibre pairing,
+      not a normalisation artefact.
+
+      \item The \emph{observable hierarchy}: the pair capacity $\sigma_c(n)$ (normalised BFS
+      span in the Weil block $V_c$) is strictly finer than the Markov spectrum of the Weil
+      operators.
+      Spectral equality of characters does not imply capacity profile equality.
+      This distinction is essential for hypothesis~$[\mathrm{H\text{-}color}]$.
+
+      \item The \emph{admissibility thread} $Q_8 \subset 2I \subset \SU(2)$ is an output of
+      the sub-programme, not an input.
+      $Q_8$ is the minimal non-abelian finite subgroup of $\SU(2)$ compatible with bounded-flux
+      admissibility; $2I$ is the maximal admissible finite subgroup; the LPS family provides the
+      Ramanujan approximation to $\SU(2)$ in the large-$q$ limit.
+    \end{enumerate}
+
+  \section{Constituent Papers}
+    \label{sec:papers}
+
+    The sub-programme comprises five precursor papers and thirty-two O-series papers.
+    Table~\ref{tab:papers} provides an overview organised by internal phase.
+
+    \subsection{Precursor papers: SU(2) admissibility sub-programme}
+      \label{sec:precursor}
+
+      Four papers precede the O-series proper and explore spectral admissibility on Cayley graphs
+      of finite $\SU(2)$ subgroups.
+
+      \textbf{SpectralAdmissibility}~\cite{Beau2026a1} carries out the spectral admissibility
+      programme on the chain $Q_8 \subset 2I \subset \mathrm{PSL}(2,\mathbb{F}_q)$.
+      It derives the admissibility hierarchy $A^{\max}_n = \cchi/\sqrt{\lambda_n}$ in the
+      linearised regime and shows the non-linear DBI correction preserves it.
+      For the SU(3) chain $\Delta(27) \subset \Sigma(168)$, it establishes the co-admissibility
+      of the fundamental and anti-fundamental representations via character theory.
+
+      \textbf{SpectralCapacity}~\cite{Beau2026a2} introduces the capacity functional
+      $\mathcal{C}_\alpha(G, S)$ and proves the binary-polyhedral maximality conjecture:
+      $2I$ uniquely maximises $\mathcal{C}_\alpha(G, S)$ for all $\alpha > 0$ among finite
+      $\SU(2)$ subgroups with neutral generating sets.
+      The proof is closed analytically for degrees $d \in \{6, 12, 24\}$ (Theorem~8.1 of that
+      paper).
+
+      \textbf{SpectralGramRigidity}~\cite{Beau2026a3} shows that the geometry of neutral
+      generating sets on $\SU(2)$ is fully encoded in pairwise character values
+      $G_{st} = -\tfrac{1}{2}\chi_\rho(st)$.
+
+      \textbf{ThreeGenerations}~\cite{Beau2026a4} derives the three-generation structure from
+      the ADE stratigraphic levels of binary Cayley graphs (structural).
+
+      \textbf{SpectralRelaxation}~\cite{Beau2026a5} establishes $\Lambda_{\mathrm{proj}} \asymp
+  \lambda_2$ for LPS expander families, providing the entry point for the O-series dynamics.
+
+    \subsection{O-series core: LPS phase (O1--O8)}
+      \label{sec:lps}
+
+      The opening O-series papers work on Lubotzky--Phillips--Sarnak expander graphs, which have
+      exponential shell growth $|B_n| \sim p^n$ and therefore represent the most natural
+      large-group setting for bounded-flux dynamics.
+
+      \textbf{O1}~\cite{Beau2026a6} shows that LPS saturation is a fixed-valence artefact;
+      growing valence restores the pre-saturation window.
+
+      \textbf{O3}~\cite{Beau2026a7} derives the phenomenological target window
+      $\betastar \in (0.09, 0.13)$ from the charged-lepton mass ratios $m_e : m_\mu : m_\tau$
+      (structural).
+
+      \textbf{O4}~\cite{Beau2026a8} proves the structural upper bound $\beta \leq 1$ from the
+      BI flux constraint and the Cheeger isoperimetric inequality.
+
+      \textbf{O5}~\cite{Beau2026a9} establishes the obstruction theorem: the $\beta$ gap cannot
+      be closed by any purely representation-theoretic or fixed-representation approach.
+
+      \textbf{O6}~\cite{Beau2026a10} proves matrix-level confinement of the cascade exponent.
+
+      \textbf{O7}~\cite{Beau2026a11} reformulates the target as a capacity exponent
+      $\delta \in [7.4, 10.6]$ on three-step path fingerprints (structural).
+
+      \textbf{O8}~\cite{Beau2026a12} establishes the geometric obstruction closing the LPS
+      phase: exponential shell growth compresses the entire pre-saturation window into
+      $O(\log q)$ BFS steps, preventing stable slope estimation.
+
+    \subsection{O-series core: Heisenberg transition (O9--O15)}
+      \label{sec:heisenberg}
+
+      The geometric obstruction of O8 forces a change of arena.
+      The Cayley graph $\Cay(\Heis_3(\mathbb{Z}/q\mathbb{Z}), S_q)$ has polynomial ball growth
+      $|B_n| \sim C n^4$ (Bass--Guivarc'h theorem, homogeneous dimension $D = 4$), restoring an
+      exploitable window of $\Theta(q)$ BFS steps.
+
+      \textbf{O9}~\cite{Beau2026a13} resolves the geometric obstruction by switching to
+      Heisenberg graphs.
+      Polynomial growth is confirmed; the window depth scales as $\Theta(q)$.
+
+      \textbf{O10}~\cite{Beau2026a14} performs the first large-$q$ computation ($q = 101$,
+      $|G_q| = 1{,}030{,}301$) and identifies an algorithmic obstruction: the dense TensorSketch
+      fingerprint is structurally mismatched to the problem, requiring sketch dimension
+      $D \gg q^4$.
+
+      \textbf{O11}~\cite{Beau2026a15} resolves the algorithmic obstruction via a bidimensional
+      Fourier-character proxy for the Weil-block decomposition; a stable estimate
+      $\hat\delta_{\mathrm{cap}} \approx 3.4$ is extracted at $q = 307$.
+
+      \textbf{O12}~\cite{Beau2026a16} implements the exact Weil projection, closes the
+      representation-level ambiguity left by O11, and extracts $\hat\delta_{\mathrm{exact}}
+  \approx 4.3$--$4.8$ for $q \in \{29, 53, 61\}$ ($R^2 > 0.98$).
+
+      \textbf{O13}~\cite{Beau2026a17} confirms asymptotic stability of the exact Weil-block
+      capacity over the extended prime range and establishes monotone decrease of
+      $\hat\delta_{\mathrm{exact}}(q)$, definitively refuting the finite-size hypothesis.
+
+      \textbf{O14}~\cite{Beau2026a18} corrects the $\delta \mapsto \betastar$ relation via
+      block normalisation and central-phase contributions.
+
+      \textbf{O15}~\cite{Beau2026a19} establishes the block-level no-go: no reweighting of
+      individual block data recovers the admissible window $\delta \in [7.4, 10.6]$
+      (proved, Corollary~4.8 of that paper).
+      This result forces the introduction of the pair observable in O16.
+
+    \subsection{Pair observable and transfer chain (O16--O24)}
+      \label{sec:pair}
+
+      The block-level no-go of O15 is structurally informative: it identifies the wrong
+      observable class, not a defect of the transfer mechanism.
+      The physically correct observable is the \emph{pair capacity}
+      $\spair(n) = \sigma_c(n) \cdot \sigma_{q-c}(n)$ on conjugate pairs $\{c, q-c\}$.
+
+      \textbf{O16}~\cite{Beau2026a20} identifies the observable mismatch.
+      The exponent doubling $\dimpair = 2\delta_c \approx 7.44$ resolves the gap (structural).
+
+      \textbf{O17}~\cite{Beau2026a21} proves that $\rho_{q-c} = \bar\rho_c$ is forced by
+      fibre-level admissibility; the pair structure is derived, not postulated.
+
+      \textbf{O18}~\cite{Beau2026a22} gives the foundational derivation of the parity involution
+      $c \leftrightarrow q - c$.
+      Born--Infeld parity is the only global symmetry of the BI action, ensuring each fibre of
+      $\Pi$ is exactly $\{\chi, -\chi\}$ (minimal fibre condition, proved, Theorem~4.1).
+
+      \textbf{O19}~\cite{Beau2026a23} proves that the residual amplitude factor
+      $r(c, q) \in \{1, 2, 3, 4\}$ does not affect $\dimpair$; the observable is
+      pipeline-independent.
+
+      \textbf{O20}~\cite{Beau2026a24} establishes a dynamical selection criterion for admissible
+      modes via projective persistence (structural).
+
+      \textbf{O21}~\cite{Beau2026a25} defines the observable saturation rank $\nobs$ via the
+      threshold condition $\Sigma_c(n_3) = 3$, constructs the fibre-level transfer
+      $\dimpair \to \betastar$, and resolves the O15 obstruction by identifying it as an
+      observable-class mismatch.
+
+      \textbf{O22}~\cite{Beau2026a26} proves that Born--Infeld projection locking forces
+      $\nobs$ onto a BFS shell of $\Cay(G_q, S_q)$: shell-alignment is a theorem, not an
+      independent geometric hypothesis.
+
+      \textbf{O23}~\cite{Beau2026a27} closes the complementary question: the threshold value
+      $\Sigma_c(n_3) = 3$ is not an arithmetic input but a structural consequence of
+      Born--Infeld fibre admissibility.
+      The value three is the unique dimension of the imaginary subspace $\Im\mathbb{H}$ of the
+      minimal admissible associative non-commutative algebra.
+
+      \textbf{O24}~\cite{Beau2026a28} is the capstone of the analytical O-series.
+      The Verticality Lemma (``$\ker\Pi$ is free, $\Im\Pi$ is constrained'') closes the
+      unconditional transfer chain $\cchi \to \dimpair \to \betastar$
+      (Corollary~4.2: $\betastar \approx 0.126$, proved).
+
+    \subsection{Numerical campaign and closure papers (O25--O32)}
+      \label{sec:numerical}
+
+      With the analytical chain closed by O24, the post-O24 programme turns to three tasks:
+      numerical validation of $\dimpair$, representation-theoretic identification of the
+      admissible sector, and the SU(3) colour sector.
+
+      \textbf{O25}~\cite{Beau2026a29} carries out the systematic pair-level numerical campaign
+      across all $(q-1)/2$ conjugate pairs with $M = 50$ independent block samples per pair, for
+      $q \in \{29, 61, 101, 151, 211\}$.
+      Results: $\bar\delta_{\mathrm{pair}} \in \{8.89, 9.98, 9.55, 9.13, 8.78\}$ with inter-pair
+      standard deviation decreasing from 0.54 to 0.11.
+      After the O14 normalisation correction, values $\delta_{\mathrm{corr}}(q) \in [7.7, 9.0]$
+      fall consistently within the admissible window $[7.4, 10.6]$ for
+      $q \in \{61, 101, 151, 211\}$.
+
+      \textbf{O26}~\cite{Beau2026a30} establishes the quadratic completion of admissible
+      spectral pairs via binary-icosahedral representation, providing the Level~III
+      identification criterion for the spin-$\tfrac{1}{2}$ sector.
+
+      \textbf{O27}~\cite{Beau2026a31} proves that every admissible morphism $\Phi_{q,\rho}$
+      necessarily factors through $\su(2)$ (quaternionic rigidity theorem, proved
+      unconditionally).
+      The identification chain becomes:
+      \[
+        \text{emergence} \Rightarrow \su(2)\;[\text{O27}]
+        \Rightarrow \text{pair data} \in \Sym(V_\rho, \mathbb{C})\;[\text{O29}]
+        \Rightarrow r_{\mathrm{eff}} = 3 \Rightarrow d_\rho = 2\;[\text{O29}].
+      \]
+
+      \textbf{O28}~\cite{Beau2026a32} confirms asymptotic calibration of the BFS window:
+      $\delta_{\mathrm{corr}}(q) \in [7.4, 10.6]$ for all $q \in \{29, 61, 101, 151, 211\}$;
+      the covariance $C_c$ in $\End(H_{\mathrm{eff}})$ has rank exactly 3 for every conjugate
+      pair at $q \in \{61, 101, 151\}$, with invariant eigenvalue structure
+      $[1 : \tfrac{1}{2} : \tfrac{1}{2}]$.
+
+      \textbf{O29}~\cite{Beau2026a33} identifies the spin-$\tfrac{1}{2}$ irreducible sector
+      $V_\rho \subset H_{\mathrm{eff}} = \mathbb{C}^3$ via the symmetric rank formula
+      $r_{\mathrm{eff}} = d_\rho(d_\rho + 1)/2$.
+      The unique solution $d_\rho = 2$ is confirmed numerically for $q \in \{61, 101, 151\}$.
+
+      \textbf{O30}~\cite{Beau2026a34} derives analytically the invariant eigenvalue ratio
+      $\lambda_1/\lambda_2 = 2$ of the per-pair covariance: Born--Infeld parity anti-linearity
+      forces an equatorial constraint on the admissible fibre, and the factor of two is purely
+      structural (squared symmetric-tensor normalisation of the Carnot-degree-2 central generator
+      $Z = [X, Y]$, proved).
+
+      \textbf{O31}~\cite{Beau2026a35} develops the structural framework for SU(3) emergence.
+      Metaplectic intertwining of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ forces triplet
+      co-admissibility unconditionally for the colour-adapted Cayley graph $\Cay(G_q, S_q^{(3)})$.
+      SU(3) is identified as the symmetry group of the co-admissible colour triplet, conditional
+      on hypothesis~$[\mathrm{H\text{-}color}]$ for the standard generating set.
+      O31 also closes the spectral approach to $[\mathrm{H\text{-}color}]$: exact
+      generator-twist isospectrality does not imply colour-triplet spectral degeneracy.
+
+      \textbf{O32}~\cite{Beau2026a36} provides the numerical test of $[\mathrm{H\text{-}color}]$
+      on the standard graph.
+      Results for $q \in \{61, 151, 211\}$ (test, $q \equiv 1 \pmod 3$) and
+      $q \in \{29, 101\}$ (control, $q \equiv 2 \pmod 3$): hypothesis~$[\mathrm{H\text{-}color}]$
+      passes all three test primes; $q = 307$ confirms ($R_{\mathrm{var}} = 0.7$, all 4 triplets).
+
+      \begin{table}[ht]
+        \centering
+        \caption{Summary of the O-series by internal phase.
+        Status codes: P = proved; S = structural; N = numerical; O = open.}
+        \label{tab:papers}
+        \renewcommand{\arraystretch}{1.2}
+        \begin{tabular}{@{}lllll@{}}
+          \toprule
+          Phase & Papers & Central output & Status \\
+          \midrule
+          Precursors & SpAdm, SpCap, SpGram, 3Gen & $Q_8 \subset 2I$, binary maximality & P/S \\
+          LPS phase & SpRel, O1--O8 & $\beta \leq 1$; geometric obstruction & P \\
+          Heisenberg transition & O9--O15 & Exact $\hat\delta_{\mathrm{exact}} \approx 4.5$; no-go & P \\
+          Pair + transfer & O16--O24 & $\cchi \to \dimpair \to \betastar$, unconditional & P \\
+          Numerical + sector & O25--O30 & $\delta_{\mathrm{corr}} \in [7.4, 10.6]$; $d_\rho = 2$ & P/N \\
+          SU(3) / colour & O31--O32 & $\SU(3)$ conditional on $[\mathrm{H\text{-}color}]$ & S/N/O \\
+          \bottomrule
+        \end{tabular}
+      \end{table}
+
+  \section{Inputs from Upstream Results}
+    \label{sec:inputs}
+
+    The spectral admissibility sub-programme takes the following inputs from Branch~I.
+
+    \begin{enumerate}
+      \item \textbf{Weil representation.}
+      The fact that $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ and its Weil representation $V_\rho$ are
+      theorems of the axioms A1--A4, not additional postulates.
+      This is established in Foundation~\cite{Beau2026m} and HeisenbergStructure~\cite{Beau2026HeisenbergStructure}.
+
+      \item \textbf{BI saturation functional.}
+      The Born--Infeld action with saturation constant $\cchi$ is the unique analytic completion
+      compatible with bounded projective transport capacity.
+      The sub-programme takes $\cchi$ as a parameter; its structural origin is in Branch~I.
+
+      \item \textbf{Non-injectivity no-go.}
+      The ENI paper~\cite{Beau2026l} establishes that non-injectivity is a structural necessity
+      of genuine emergence, not an interpretive option.
+      The pair structure and the parity involution $c \leftrightarrow q - c$ are downstream
+      consequences.
+
+      \item \textbf{Noscale principle.}
+      The absence of an external dimensional scale at the admissibility level~\cite{Beau2026j}
+      ensures that the only dimensionful parameter available to the sub-programme is $\cchi$,
+      enforcing the internal consistency of the capacity law.
+    \end{enumerate}
+
+    \noindent No result from Branch~III is an input to the sub-programme.
+    The admissibility thread $Q_8 \subset 2I \subset \SU(2)$, the value $\dimpair$, and the
+    cascade exponent $\betastar$ are all outputs.
+
+  \section{Outputs to Downstream Branches}
+    \label{sec:outputs}
+
+    Table~\ref{tab:outputs} lists the principal outputs of the sub-programme and their
+    downstream consumers.
+
+    \begin{table}[ht]
+      \centering
+      \caption{Principal outputs of the spectral admissibility sub-programme and their consumers.}
+      \label{tab:outputs}
+      \renewcommand{\arraystretch}{1.3}
+      \begin{tabular}{@{}p{5.5cm}p{4.5cm}l@{}}
+        \toprule
+        Output & Consumer & Status \\
+        \midrule
+        $\betastar \approx 0.126$ & SMchargemass, lepton hierarchy & P \\
+        Admissibility thread $Q_8 \subset 2I \subset \SU(2)$ & Q1--Q3 (quantum sector) & P \\
+        Spin-$\tfrac{1}{2}$ sector $V_\rho \cong \mathbb{C}^2$ & Q7--Q11 (geometry) & P \\
+        $\Sigma_c(n_3) = 3$ and $\Im\mathbb{H} \cong \su(2)$ & Q7 (spatial identification) & P \\
+        SU(3) co-admissible triplet (conditional) & Q6a, Gauge note & S/O \\
+        $\delta_{\mathrm{corr}}(q) \in [7.4, 10.6]$ for $q \in \{61,\ldots,211\}$ & Open: $q \to \infty$ limit & N \\
+        \bottomrule
+      \end{tabular}
+    \end{table}
+
+  \section{Status of Results}
+    \label{sec:status}
+
+    \subsection{Proved results}
+      \label{sec:proved}
+
+      The following results are established as theorems within their stated assumptions.
+
+      \begin{enumerate}
+        \item \textit{Binary-polyhedral maximality} (SpectralCapacity~\cite{Beau2026a2}): $2I$
+        uniquely maximises $\mathcal{C}_\alpha(G, S)$ for all $\alpha > 0$ among finite $\SU(2)$
+        subgroups with neutral generating sets.
+        Closed analytically for $d \in \{6, 12, 24\}$ and by Proposition~8.11 for the dicyclic
+        exclusion.
+
+        \item \textit{Gram rigidity} (SpectralGramRigidity~\cite{Beau2026a3}): the geometry of
+        neutral generating sets on $\SU(2)$ is fully encoded in pairwise character values.
+
+        \item \textit{$\beta \leq 1$ upper bound} (O4~\cite{Beau2026a8}): the structural upper
+        bound from the BI flux constraint and the Cheeger inequality.
+
+        \item \textit{Block-level no-go} (O15~\cite{Beau2026a19}): no reweighting of individual
+        block data recovers $\delta \in [7.4, 10.6]$; the pair observable is necessary.
+
+        \item \textit{Parity involution} (O18~\cite{Beau2026a22}): BI parity is the unique global
+        symmetry of the BI action; the minimal fibre condition $\Pi^{-1}(x) = \{\chi, -\chi\}$ is
+        forced.
+
+        \item \textit{Pipeline independence of $\dimpair$} (O19~\cite{Beau2026a23}): the
+        residual amplitude factor $r(c,q)$ does not affect the pair exponent.
+
+        \item \textit{Shell-alignment theorem} (O22~\cite{Beau2026a26}): Born--Infeld projection
+        locking forces $\nobs \in \mathbb{N}$ as the first element of $L_{\mathrm{BI}} \cap N_q$.
+
+        \item \textit{Quaternionic minimality} (O23~\cite{Beau2026a27}): the threshold
+        $\Sigma_c(n_3) = 3$ follows from the fact that $\mathbb{H}$ is the minimal admissible
+        associative non-commutative algebra, and $\dim_\mathbb{R} \Im\mathbb{H} = 3$.
+
+        \item \textit{Unconditional transfer chain} (O24~\cite{Beau2026a28}): the Verticality
+        Lemma closes $\cchi \to \dimpair \to \betastar \approx 0.126$ without residual
+        conditionality on the fibre structure.
+
+        \item \textit{Quaternionic rigidity} (O27~\cite{Beau2026a31}): every admissible morphism
+        $\Phi_{q,\rho}$ factors through $\su(2)$.
+
+        \item \textit{Eigenvalue ratio} (O30~\cite{Beau2026a34}): the invariant ratio
+        $\lambda_1/\lambda_2 = 2$ of the per-pair covariance is analytically derived from the
+        equatorial admissible fibre constraint.
+
+        \item \textit{Generator-twist isospectrality} (O31~\cite{Beau2026a35}): the spectra of
+        $\rho_c(P_{S_q})$ and $\rho_c(P_{\varphi_\omega(S_q)})$ are equal for all $c$, but this
+        does not imply colour-triplet spectral degeneracy.
+        This closes the spectral route to $[\mathrm{H\text{-}color}]$.
+      \end{enumerate}
+
+    \subsection{Structural results}
+      \label{sec:structural}
+
+      The following results are derived from structural arguments that are internally consistent
+      but not yet fully formalised as theorems.
+
+      \begin{enumerate}
+        \item \textit{Phenomenological window} (O3~\cite{Beau2026a7}): $\betastar \in (0.09, 0.13)$
+        from $m_e : m_\mu : m_\tau$.
+
+        \item \textit{Capacity exponent target} (O7~\cite{Beau2026a11}): the target
+        $\delta \in [7.4, 10.6]$ on three-step path fingerprints.
+
+        \item \textit{Observable-class identification} (O16~\cite{Beau2026a20}): the pair
+        observable resolves the gap by exponent doubling $\dimpair = 2\delta_c$.
+
+        \item \textit{SU(3) emergence framework} (O31~\cite{Beau2026a35}): the metaplectic
+        intertwining of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ forces triplet co-admissibility
+        unconditionally for the colour-adapted Cayley graph.
+      \end{enumerate}
+
+    \subsection{Numerical evidence}
+      \label{sec:numerical-evidence}
+
+      The following results are numerically established but not yet derived analytically.
+
+      \begin{enumerate}
+        \item \textit{$\delta_{\mathrm{corr}}(q) \in [7.7, 9.0]$} (O25~\cite{Beau2026a29}): for
+        $q \in \{61, 101, 151, 211\}$ after O14 normalisation; consistently within the admissible
+        window $[7.4, 10.6]$.
+
+        \item \textit{Spin-$\tfrac{1}{2}$ sector} (O29~\cite{Beau2026a33}): $r_{\mathrm{eff}} = 3$
+        and $d_\rho = 2$ confirmed for $q \in \{61, 101, 151\}$.
+
+        \item \textit{Eigenvalue structure $[1:\tfrac{1}{2}:\tfrac{1}{2}]$} (O28~\cite{Beau2026a32}):
+        robust across all conjugate pairs and all tested primes.
+
+        \item \textit{$[\mathrm{H\text{-}color}]$ numerical support} (O32~\cite{Beau2026a36}):
+        passes for $q \in \{61, 151, 211, 307\}$ with variance ratio $R_{\mathrm{var}} \leq 1$
+        relative to the control noise floor.
+      \end{enumerate}
+
+    \subsection{Open hypotheses}
+      \label{sec:open-hyp}
+
+      The following items remain open within the sub-programme.
+
+      \begin{enumerate}
+        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$}: O32~\cite{Beau2026a36}
+        establishes three of the four levels of the hypothesis analytically
+        (rank equality in O31, average equality to $O(q^{-1})$, effective exponent equality in
+        the $q \to \infty$ limit).
+        The remaining open level is exact pointwise profile equality at finite $q$ and $M$.
+        The spectral route to this level is closed (O31): the correct mechanism must act directly
+        on the rank structure of the BFS walk, not on Markov spectra.
+
+        \item \textit{Asymptotic stabilisation of $\delta_\infty$}: the limit
+        $\delta_\infty = \lim_{q \to \infty} \dimpair(q)$ has not been computed analytically.
+        The correct asymptotic variable is $n_1(q)/q$, not $q$ itself.
+
+        \item \textit{Extension to $q = 401$}: the campaign at $q \in \{29, 61, 101, 151, 211, 307\}$
+        is complete; $q = 401$ is pending.
+      \end{enumerate}
+
+  \section{Open Deliverables}
+    \label{sec:open}
+
+    Two open deliverables define the boundary of the sub-programme as of this note.
+
+    \textbf{Open deliverable 1: Pointwise proof of $[\mathrm{H\text{-}color}]$.}
+    O32~\cite{Beau2026a36} establishes a three-tier resolution of this hypothesis.
+    (i)~$[\mathrm{H\text{-}color}]_{\mathrm{rank}}$: sector rank equality
+    $r_c(n) = r_{\omega c}(n) = r_{\omega^2 c}(n)$ is proved unconditionally in
+    O31~\cite{Beau2026a35} via intra-coset Vandermonde symmetry.
+    (ii)~$[\mathrm{H\text{-}color}]_{\mathrm{avg}}$: the block-averaged capacity satisfies
+    $\mathbb{E}[\sigma_c(n)] = \mathbb{E}[\sigma_{\omega c}(n)] + O(q^{-1})$, proved in
+    O32 (Proposition~1) via the modulation frequency argument.
+    (iii)~$[\mathrm{H\text{-}color}]_{\mathrm{eff}}$: the effective exponents satisfy
+    $\delta_c = \delta_{\omega c} = \delta_{\omega^2 c}$ in the $q \to \infty$ limit, proved in O32.
+    What remains open is $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$: exact profile equality
+    at finite $q$ and $M$, which is consistent with all numerical results but not claimed
+    analytically.
+    The SU(3) identification on the standard graph is therefore analytically established at the
+    level of effective exponents; the remaining open question is the finite-$q$ residual variance
+    $R_{\mathrm{var}}(q) \propto q^{-1}$, to be confirmed at $q = 401$.
+
+    \textbf{Open deliverable 2: Numerical campaign at $q = 401$.}
+    The campaign at $q \in \{29, 61, 101, 151, 211, 307\}$ is complete.
+    $q = 307$ confirms $[\mathrm{H\text{-}color}]$ ($R_{\mathrm{var}} = 1.17 \times 10^{-3}$,
+    all 4/4 triplets, O32~\cite{Beau2026a36}).
+    The extension to $q = 401$ is the sole remaining numerical task:
+    it constrains the rate of convergence of $n_1(q)/q$ and provides the fifth data point
+    for the $R_{\mathrm{var}}(q) \propto q^{-1}$ scaling prediction.
+
+    \medskip
+    \noindent All other open problems of earlier papers (e.g., the rigorous continuum limit of
+    the state law, the exact form of $\Phi$ on LPS graphs) are sub-problems within already
+    resolved phases and do not block the downstream branches.
+
+  \section{Conclusion}
+    \label{sec:conclusion}
+
+    The spectral admissibility sub-programme provides the core computational content of the
+    Cosmochrony corpus.
+    Starting from the Born--Infeld bounded-flux constraint on the Weil representation of
+    $\Heis_3(\mathbb{Z}/q\mathbb{Z})$, it derives the cascade exponent $\betastar \approx 0.126$
+    unconditionally, identifies the spin-$\tfrac{1}{2}$ admissible sector, and establishes the
+    admissibility thread $Q_8 \subset 2I \subset \SU(2)$ as a structural output.
+
+    The sub-programme is analytically closed for the SU(2) sector.
+    It is closed numerically for $q \in \{29, 61, 101, 151, 211, 307\}$.
+    The extension to SU(3) is conditional on hypothesis~$[\mathrm{H\text{-}color}]$, whose
+    analytical proof remains an open problem in Hecke spectral theory.
+
+    The outputs of this sub-programme are used throughout Branch~III: by the quantum sector
+    (Q1--Q3), by the geometric emergence sub-programme (Q5a--Q11), by the gauge structure
+    sub-programme (Q6a, O31--O32), and by the fermionic matter papers (Q14).
+    Reading the O-series without this map is possible but significantly more difficult;
+    this note is intended to make the logical structure transparent before the technical
+    machinery is engaged.
+
+    \newpage
+    \bibliographystyle{plain}
+    \bibliography{cosmochrony-bibliography}
+
+\end{document}

@@ -172,11 +172,14 @@ $\chi$ itself.
 
     Each arrow in~\eqref{eq:chain} corresponds to a distinct analytical or numerical
     sub-problem, resolved at a different stage of the sub-programme.
-    The chain is \emph{unconditional} with respect to the fibre structure of $\Pi$
-    (O24,~\cite{Beau2026a28}), meaning that no free parameter is adjusted to produce
-    $\betastar$.
-    The sole remaining conditionality concerns the extension of the SU(3) sector:
-    this requires hypothesis~$[\mathrm{H\text{-}color}]$ (Section~\ref{sec:open}).
+    The transfer mechanism $\cchi \to \dimpair \to \betastar$ is unconditional at the
+    level of the admissible fibre structure (O24,~\cite{Beau2026a28}): no free parameter
+    is adjusted to produce $\betastar \approx 0.126$.
+    The asymptotic numerical stabilisation of $\dimpair(q)$ as $q \to \infty$ is a
+    separate analytical and numerical question, recorded as open in
+    Section~\ref{sec:open-hyp}.
+    The sole conditionality on the \emph{group-theoretic} side concerns the SU(3) sector,
+    which requires hypothesis~$[\mathrm{H\text{-}color}]$ (Section~\ref{sec:open}).
 
     \medskip
     Three structural facts underlie the chain and should not be confused.
@@ -399,8 +402,9 @@ $\chi$ itself.
       \textbf{O31}~\cite{Beau2026a35} develops the structural framework for SU(3) emergence.
       Metaplectic intertwining of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ forces triplet
       co-admissibility unconditionally for the colour-adapted Cayley graph $\Cay(G_q, S_q^{(3)})$.
-      SU(3) is identified as the symmetry group of the co-admissible colour triplet, conditional
-      on hypothesis~$[\mathrm{H\text{-}color}]$ for the standard generating set.
+      SU(3) is identified as the symmetry group of the co-admissible colour triplet, proved
+      for the standard generating set via Proposition~4.23 of O31
+      (single-frequency fingerprint structure).
       O31 also closes the spectral approach to $[\mathrm{H\text{-}color}]$: exact
       generator-twist isospectrality does not imply colour-triplet spectral degeneracy.
 
@@ -425,7 +429,7 @@ $\chi$ itself.
           Heisenberg transition & O9--O15 & Exact $\hat\delta_{\mathrm{exact}} \approx 4.5$; no-go & P \\
           Pair + transfer & O16--O24 & $\cchi \to \dimpair \to \betastar$, unconditional & P \\
           Numerical + sector & O25--O30 & $\delta_{\mathrm{corr}} \in [7.4, 10.6]$; $d_\rho = 2$ & P/N \\
-          SU(3) / colour & O31--O32 & $\SU(3)$ conditional on $[\mathrm{H\text{-}color}]$ & S/N/O \\
+          SU(3) / colour & O31--O32 & $\SU(3)$ unconditional; $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$ proved & P \\
           \bottomrule
         \end{tabular}
       \end{table}
@@ -481,7 +485,7 @@ $\chi$ itself.
         Admissibility thread $Q_8 \subset 2I \subset \SU(2)$ & Q1--Q3 (quantum sector) & P \\
         Spin-$\tfrac{1}{2}$ sector $V_\rho \cong \mathbb{C}^2$ & Q7--Q11 (geometry) & P \\
         $\Sigma_c(n_3) = 3$ and $\Im\mathbb{H} \cong \su(2)$ & Q7 (spatial identification) & P \\
-        SU(3) co-admissible triplet (conditional) & Q6a, Gauge note & S/O \\
+        SU(3) co-admissible triplet (unconditional, O31~v1.5) & Q6a, Gauge note & P \\
         $\delta_{\mathrm{corr}}(q) \in [7.4, 10.6]$ for $q \in \{61,\ldots,211\}$ & Open: $q \to \infty$ limit & N \\
         \bottomrule
       \end{tabular}
@@ -590,13 +594,12 @@ $\chi$ itself.
       The following items remain open within the sub-programme.
 
       \begin{enumerate}
-        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$}: O32~\cite{Beau2026a36}
-        establishes three of the four levels of the hypothesis analytically
-        (rank equality in O31, average equality to $O(q^{-1})$, effective exponent equality in
-        the $q \to \infty$ limit).
-        The remaining open level is exact pointwise profile equality at finite $q$ and $M$.
-        The spectral route to this level is closed (O31): the correct mechanism must act directly
-        on the rank structure of the BFS walk, not on Markov spectra.
+        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$}:
+        proved analytically in O31 (Proposition~4.23,~\cite{Beau2026a35}): each O12
+        fingerprint vector carries a single frequency
+        $B = c_1 b_1 + c_2 b_2 + c_3 b_3$, and the orbit dilation $B \mapsto \omega B$
+        is a bijection of $\mathbb{Z}/q\mathbb{Z}$.
+        Together with the three prior levels, $[\mathrm{H\text{-}color}]$ is fully established.
 
         \item \textit{Asymptotic stabilisation of $\delta_\infty$}: the limit
         $\delta_\infty = \lim_{q \to \infty} \dimpair(q)$ has not been computed analytically.
@@ -611,22 +614,16 @@ $\chi$ itself.
 
     Two open deliverables define the boundary of the sub-programme as of this note.
 
-    \textbf{Open deliverable 1: Pointwise proof of $[\mathrm{H\text{-}color}]$.}
-    O32~\cite{Beau2026a36} establishes a three-tier resolution of this hypothesis.
+    \textbf{Closed: $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$.}
+    All four levels of $[\mathrm{H\text{-}color}]$ are now analytically established.
     (i)~$[\mathrm{H\text{-}color}]_{\mathrm{rank}}$: sector rank equality
-    $r_c(n) = r_{\omega c}(n) = r_{\omega^2 c}(n)$ is proved unconditionally in
+    $r_c(n) = r_{\omega c}(n) = r_{\omega^2 c}(n)$ proved unconditionally in
     O31~\cite{Beau2026a35} via intra-coset Vandermonde symmetry.
-    (ii)~$[\mathrm{H\text{-}color}]_{\mathrm{avg}}$: the block-averaged capacity satisfies
-    $\mathbb{E}[\sigma_c(n)] = \mathbb{E}[\sigma_{\omega c}(n)] + O(q^{-1})$, proved in
-    O32 (Proposition~1) via the modulation frequency argument.
-    (iii)~$[\mathrm{H\text{-}color}]_{\mathrm{eff}}$: the effective exponents satisfy
-    $\delta_c = \delta_{\omega c} = \delta_{\omega^2 c}$ in the $q \to \infty$ limit, proved in O32.
-    What remains open is $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$: exact profile equality
-    at finite $q$ and $M$, which is consistent with all numerical results but not claimed
-    analytically.
-    The SU(3) identification on the standard graph is therefore analytically established at the
-    level of effective exponents; the remaining open question is the finite-$q$ residual variance
-    $R_{\mathrm{var}}(q) \propto q^{-1}$, to be confirmed at $q = 401$.
+    (ii)~$[\mathrm{H\text{-}color}]_{\mathrm{avg}}$: proved in O32 (Proposition~1) to $O(q^{-1})$.
+    (iii)~$[\mathrm{H\text{-}color}]_{\mathrm{eff}}$: proved in O32 in the $q \to \infty$ limit.
+    (iv)~$[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$: proved in O31
+    (Proposition~4.23,~\cite{Beau2026a35}) via the single-frequency fingerprint structure.
+    The $\SU(3)$ identification on the standard graph is therefore fully unconditional.
 
     \textbf{Open deliverable 2: Numerical campaign at $q = 401$.}
     The campaign at $q \in \{29, 61, 101, 151, 211, 307\}$ is complete.
@@ -653,8 +650,10 @@ $\chi$ itself.
 
     The sub-programme is analytically closed for the SU(2) sector.
     It is closed numerically for $q \in \{29, 61, 101, 151, 211, 307\}$.
-    The extension to SU(3) is conditional on hypothesis~$[\mathrm{H\text{-}color}]$, whose
-    analytical proof remains an open problem in Hecke spectral theory.
+    The extension to SU(3) is established unconditionally for the colour-adapted graph
+    and at all four levels on the standard graph (O31--O32,~\cite{Beau2026a35,Beau2026a36}):
+    $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$ is proved analytically in O31
+    (Proposition~4.23), completing the $\SU(3)$ identification without residual conditionality.
 
     The outputs of this sub-programme are used throughout Branch~III: by the quantum sector
     (Q1--Q3), by the geometric emergence sub-programme (Q5a--Q11), by the gauge structure

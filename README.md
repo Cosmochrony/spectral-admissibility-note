@@ -16,9 +16,9 @@ $c \in (\mathbb{Z}/q\mathbb{Z})^\times$.
 The Born--Infeld saturation constraint bounds the projective flux carried by
 each mode,
 
-$A_n \leq A^{\max}_n := c_\chi / \sqrt{\lambda_n}$,
+$A_n \leq A^{\max}_n := c_{\mathrm{BI}} / \sqrt{\lambda_n}$,
 
-where $\lambda_n$ is the Laplacian eigenvalue at BFS depth $n$ and $c_\chi$ is
+where $\lambda_n$ is the Laplacian eigenvalue at BFS depth $n$ and $c_{\mathrm{BI}}$ is
 the Born--Infeld saturation constant.
 
 > Which combinations of Weil sectors remain admissible under this constraint,
@@ -28,9 +28,9 @@ the Born--Infeld saturation constant.
 
 The sub-programme is organised around a single derivation chain:
 
-$c_\chi
+$c_{\mathrm{BI}}
 \;\Longrightarrow\;
-A^{\max}_n = c_\chi/\sqrt{\lambda_n}
+A^{\max}_n = c_{\mathrm{BI}}/\sqrt{\lambda_n}
 \;\Longrightarrow\;
 \sigma^{\mathrm{can}}_{\mathrm{pair}}(n)
 \;\Longrightarrow\;
@@ -80,7 +80,7 @@ O-series papers**, organised into internal phases:
 | Precursors | SpAdm, SpCap, SpGram, 3Gen | $Q_8 \subset 2I$, binary maximality | P/S |
 | LPS phase | SpRel, O1–O8 | $\beta \leq 1$; geometric obstruction | P |
 | Heisenberg transition | O9–O15 | exact $\hat\delta_{\mathrm{exact}} \approx 4.5$; no-go | P |
-| Pair + transfer | O16–O24 | $c_\chi \to \delta_{\mathrm{pair}} \to \beta^*$, unconditional | P |
+| Pair + transfer | O16–O24 | $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}} \to \beta^*$, unconditional | P |
 | Numerical + sector | O25–O30 | $\delta_{\mathrm{corr}} \in [7.4, 10.6]$; $d_\rho = 2$ | P/N |
 | SU(3) / colour | O31–O32 | $SU(3)$ conditional on $[\mathrm{H\text{-}color}]$ | S/N/O |
 

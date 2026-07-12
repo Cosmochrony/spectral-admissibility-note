@@ -4,5 +4,6 @@
   "publication_type": "workingpaper",
   "main_tex": "tex/SpectralAdmissibilityNote.tex",
   "zenodo_id": 20402946,
-  "doi": "10.5281/zenodo.20402946"
+  "doi": "10.5281/zenodo.20402946",
+  "version": "1.2.1"
 }

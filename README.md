@@ -1,5 +1,5 @@
 This repository contains the source of the **Spectral Admissibility Presentation Note** Cosmochrony paper  
-[*The Spectral Admissibility Sub-Programme — Presentation Note 1*](out/SpectralAdmissibilityNote.pdf).
+*The Spectral Admissibility Sub-Programme — Presentation Note 1*.
 
 This work is a **structured entry point** to the spectral admissibility
 sub-programme (Branch II of the Cosmochrony corpus), not a summary of results.

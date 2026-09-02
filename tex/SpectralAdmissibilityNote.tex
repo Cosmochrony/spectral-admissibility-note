@@ -378,14 +378,20 @@ $\chi$ itself.
       spectral pairs via binary-icosahedral representation, providing the Level~III
       identification criterion for the spin-$\tfrac{1}{2}$ sector.
 
-      \textbf{O27}~\cite{Beau2026a31} proves that every admissible morphism $\Phi_{q,\rho}$
-      necessarily factors through $\su(2)$ (quaternionic rigidity theorem, proved
-      unconditionally).
-      The identification chain becomes:
+      \textbf{O27}~\cite{Beau2026a31} shows that every admissible morphism factors uniquely
+      through the admissibility quotient, under $\ker \Pi_{\mathrm{adm}} \subseteq \ker \Phi$, and
+      exhibits the canonical representation action $\rho \colon \su(2) \to \End(V_\rho)$; the
+      corresponding intertwiner space is one-dimensional, so an intertwiner is unique only up to a
+      scalar.
+      Identifying the quotient with $\su(2)$ is the carrier supplied conditionally by O23.
+      The vector lift of O26 Hypothesis~4.4 is not furnished and remains open, since
+      $\operatorname{Hom}_{\su(2)}(\mathbf{3},\mathbf{2}) = 0$.
+      The identification chain becomes, with arrows of unequal type --- its first step being the
+      carrier supplied conditionally by O23, not a consequence of O27's three constraints:
       \[
-        \text{emergence} \Rightarrow \su(2)\;[\text{O27}]
+        \text{emergence} \Rightarrow \su(2)\;[\text{O27, conditional}]
         \Rightarrow H_{\mathrm{eff}} \cong \Sym^2(V_\rho)\;\text{(spin-$1$)}\;[\text{O29}]
-        \Rightarrow r_{\mathrm{eff}} = 3\;\text{(carrier)},\; d_\rho = 2\;\text{(square-root)}\;[\text{O29}].
+        \Rightarrow r_{\mathrm{eff}} = 3\;\text{(carrier)}\;[\text{O29}].
       \]
 
       \textbf{O28}~\cite{Beau2026a32} confirms asymptotic calibration of the BFS window:
@@ -395,15 +401,19 @@ $\chi$ itself.
       $[1 : \tfrac{1}{2} : \tfrac{1}{2}]$.
 
       \textbf{O29}~\cite{Beau2026a33} identifies the carrier $H_{\mathrm{eff}} \cong \Sym^2(V_\rho)$
-      (spin-$1$): $r_{\mathrm{eff}} = 3$ confirmed numerically for $q \in \{61, 101, 151\}$, with $d_\rho = 2$
-      the spin-$\tfrac{1}{2}$ square-root doublet recovered via the Veronese structure, not the rank measured
+      (spin-$1$): $r_{\mathrm{eff}} = 3$ confirmed numerically for $q \in \{61, 101, 151\}$.
+      the doublet dimension $d_\rho = 2$ is the minimality selection of O26, not a measurement of those data, and no Veronese square root is recovered there.
+      This is the carrier rank, not the rank measured
       by Test~4.
 
-      \textbf{O30}~\cite{Beau2026a34} derives analytically the invariant eigenvalue ratio
-      $\lambda_1/\lambda_2 = 2$ of the per-pair covariance: Born--Infeld parity anti-linearity
-      forces an equatorial constraint on the admissible fibre, and the factor of two is purely
-      structural (squared symmetric-tensor normalisation of the Carnot-degree-2 central generator
-      $Z = [X, Y]$, proved).
+      \textbf{O30}~\cite{Beau2026a34} gives a conditional structural account of an eigenvalue ratio
+      $\lambda_1/\lambda_2 = 2$, conditional on (H0)--(H3) there and, for the spectral ratio, on the two weighted
+      decorrelation conditions; it concerns a $3\times3$ model on $\Sym^2(V_\rho)$ and not the
+      $9\times9$ covariance measured in O28.
+      The factor of two is the squared symmetric-tensor normalisation of the direction that the
+      Carnot grading identifies as central.
+      The numerical $9\times9$ ratio reported in O28 is an empirical result, independent of that
+      account.
 
       \textbf{O31}~\cite{Beau2026a35} develops the structural framework for SU(3) emergence.
       Metaplectic intertwining of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ forces triplet
@@ -542,12 +552,14 @@ $\chi$ itself.
         Lemma closes $\cchi \to \dimpair \to \betastar \approx 0.126$ without residual
         conditionality on the fibre structure.
 
-        \item \textit{Quaternionic rigidity} (O27~\cite{Beau2026a31}): every admissible morphism
-        $\Phi_{q,\rho}$ factors through $\su(2)$.
+        \item \textit{Admissible factorisation} (O27~\cite{Beau2026a31}): every admissible
+        morphism factors uniquely through the admissibility quotient; identifying that quotient
+        with $\su(2)$ is conditional on O23's carrier.
 
-        \item \textit{Eigenvalue ratio} (O30~\cite{Beau2026a34}): the invariant ratio
-        $\lambda_1/\lambda_2 = 2$ of the per-pair covariance is analytically derived from the
-        equatorial admissible fibre constraint.
+        \item \textit{Eigenvalue ratio} (O30~\cite{Beau2026a34}): in a conditional $3\times3$
+        model on $\Sym^2(V_\rho)$, the ratio $\lambda_1/\lambda_2 = 2$ follows from the equatorial
+        constraint under (H0)--(H3) and two weighted decorrelation conditions.  It is not an
+        account of O28's $9\times9$ measurement.
 
         \item \textit{Generator-twist isospectrality} (O31~\cite{Beau2026a35}): the spectra of
         $\rho_c(P_{S_q})$ and $\rho_c(P_{\varphi_\omega(S_q)})$ are equal for all $c$, but this
@@ -587,7 +599,7 @@ $\chi$ itself.
         window $[7.4, 10.6]$.
 
         \item \textit{Spin-$\tfrac{1}{2}$ sector} (O29~\cite{Beau2026a33}): $r_{\mathrm{eff}} = 3$
-        and $d_\rho = 2$ confirmed for $q \in \{61, 101, 151\}$.
+        confirmed for $q \in \{61, 101, 151\}$; the doublet dimension $d_\rho = 2$ is the minimality selection of O26, not a measurement of those data.
 
         \item \textit{Eigenvalue structure $[1:\tfrac{1}{2}:\tfrac{1}{2}]$} (O28~\cite{Beau2026a32}):
         robust across all conjugate pairs and all tested primes.
@@ -653,12 +665,16 @@ $\chi$ itself.
     The spectral admissibility sub-programme provides the core computational content of the
     Cosmochrony corpus.
     Starting from the Born--Infeld bounded-flux constraint on the Weil representation of
-    $\Heis_3(\mathbb{Z}/q\mathbb{Z})$, it derives the cascade exponent $\betastar \approx 0.126$
-    unconditionally, identifies the spin-$\tfrac{1}{2}$ admissible sector, and establishes the
+    $\Heis_3(\mathbb{Z}/q\mathbb{Z})$, it estimates the cascade exponent $\betastar \approx 0.126$,
+    selects the spin-$\tfrac{1}{2}$ admissible sector by minimality, and establishes the
     admissibility thread $Q_8 \subset 2I \subset \SU(2)$ as a structural output.
+    The spin-$\tfrac{1}{2}$ sector is not identified unconditionally: it is not reachable
+    equivariantly from the adjoint, and O26 Hypothesis~4.4 remains open.
 
-    The sub-programme is analytically closed for the SU(2) sector.
+    The SU(2) sector is carried by a conditional analytical chain, not closed.
     It is closed numerically for $q \in \{29, 61, 101, 151, 211, 307\}$.
+    The $\SU(2)$ sector is not analytically closed: its carrier is supplied conditionally by O23
+    and O26 Hypothesis~4.4 remains open.
     The extension to SU(3) is established unconditionally for the colour-adapted graph
     and at all four levels on the standard graph (O31--O32,~\cite{Beau2026a35,Beau2026a36}):
     $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$ is proved analytically in O31

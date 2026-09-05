@@ -2,16 +2,18 @@ This repository contains the source of the **Spectral Admissibility Presentation
 *The Spectral Admissibility Sub-Programme — Presentation Note 1*.
 
 This work is a **structured entry point** to the spectral admissibility
-sub-programme (Branch II of the Cosmochrony corpus), not a summary of results.
+sub-programme (Branch II of the Cosmochrony corpus), not a substitute for the
+constituent papers.
 It maps the constituent papers, identifies the internal phases, records the
-status of every result as proved, structural, numerical, conditional, or open, and states
+status of their principal results as proved, structural, numerical, conditional, or open, and states
 the remaining open deliverables.
 
 ## Central Question
 
-The non-injective projection $\Pi$ acts on the Weil representation of the
-Heisenberg group $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$, decomposed into
-irreducible blocks $V_c$ indexed by characters
+The spectral construction studies the proposed non-injective projection $\Pi$ on
+supplied representation blocks $V_c$ of the Heisenberg group
+$\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$, together with its associated Weil
+action. The blocks are indexed by characters
 $c \in (\mathbb{Z}/q\mathbb{Z})^\times$.
 The Born--Infeld saturation constraint bounds the projective flux carried by
 each mode,
@@ -63,19 +65,20 @@ The Cosmochrony corpus is organised into three branches:
   that implication by a six-element countermodel, so the carrier is supplied.
 - **Branch II** — the spectral admissibility sub-programme (this note): the
   **computational engine** of the corpus.
-- **Branch III** — derives quantum mechanics, spacetime geometry, gauge
-  structure, and fermionic matter from Branch I axioms and Branch II spectral data.
+- **Branch III** — develops the quantum, spacetime-geometric, gauge, and
+  fermionic-matter tracks from Branch I axioms and Branch II spectral data,
+  subject to the status of each connecting bridge.
 
-Branch II takes the algebraic output of Branch I and produces the two inputs
-Branch III depends on:
+Branch II takes the supplied Heisenberg carrier and associated Weil action as
+inputs and organises two items used by Branch III:
 
 1. the admissibility thread $Q_8 \subset 2I \subset SU(2)$, within which the
    spin-$\tfrac{1}{2}$ sector is selected by O26 minimality on a carrier supplied
    by O23 rather than identified here;
-2. the capacity exponent $\delta_{\mathrm{pair}}$ and its interpretation as the
-   scaling exponent of Hilbert–Schmidt norm growth in the minimal admissible
-   non-abelian sector $\mathfrak{su}(2)$. The reciprocal $\beta^* \approx 0.126$
-   is a coincidence check, not an output of the chain.
+2. the measured capacity exponent $\delta_{\mathrm{pair}}$ on the supplied
+   construction. Its assignment to Hilbert–Schmidt norm growth in the minimal
+   non-abelian sector $\mathfrak{su}(2)$ remains conditional. The reciprocal
+   $\beta^* \approx 0.126$ is a coincidence check, not an output of the chain.
 
 ## Constituent Papers
 
@@ -85,12 +88,12 @@ organised into internal phases:
 
 | Phase | Papers | Central output | Status |
 |---|---|---|---|
-| Precursors | SpAdm, SpCap, SpGram, 3Gen | $Q_8 \subset 2I$; binary cover dominance at $d \in \{6,12,24\}$ | P/S |
+| SU(2) precursors | SpAdm, SpCap, SpGram, 3Gen | $Q_8 \subset 2I$; binary cover dominance, $d=6,12,24$ | P/S |
 | LPS phase | SpRel, O1–O8 | geometric obstruction; no cascade-exponent bound | P/O |
 | Heisenberg transition | O9–O15 | crossover slope $\approx 4.5$, unfolded exponent $3$; cond. bound | P/C |
-| Pair + transfer | O16–O24 | $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}}$ fibre-conditionality closed | C |
+| Pair + transfer boundary | O16–O24 | $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}}$ fibre-conditionality closed | C |
 | Numerical + sector | O25–O30 | $\delta_{\mathrm{corr}}$ diagnostic; $r_{\mathrm{eff}} = 3$ finite-data | N/C |
-| SU(3) / colour | O31–O32 | O31 withdrawn; O32 measurements stand | O |
+| SU(3) / colour | O31–O32 | O31 withdrawn; O32 measurements stand | N/O |
 | Spectral architecture | O33 | exact doublets and protected sectors, no Standard-Model identification | P |
 | Companion notes | Span-Growth, Critical Coverage | transfer failure; exact depth law | P |
 

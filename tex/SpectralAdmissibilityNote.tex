@@ -92,8 +92,8 @@
     status of every result as proved, structural, numerical, conditional, or open, and states the
     open deliverables: hypothesis~$[\mathrm{H\text{-}color}]$, of which the two levels
     established in O32 stand while those that rested on O31 are not currently asserted; the
-    identification of the spin-$\tfrac{1}{2}$ sector; and the extension of the numerical campaign
-    to $q = 401$.
+    identification of the spin-$\tfrac{1}{2}$ sector; and a full-breadth numerical campaign beyond
+    $q = 211$.
   \end{abstract}
 
   \medskip
@@ -130,7 +130,7 @@
     cascade and has no native carrier there, and the Span-Growth Note~\cite{Beau2026sgn} proves the
     conversion does not transfer to the substrate on which the capacities are measured.
     The value $\betastar \approx 0.126$ matches the phenomenological window
-    $\betastar \in (0.09, 0.13)$ derived from the charged-lepton mass ratios $m_e : m_\mu : m_\tau$;
+    $\betastar \in (0.09, 0.13)$ that O3 fixes by matching the charged-lepton sector;
     that agreement is a coincidence check rather than a quantitative connection between the
     projective framework and Standard Model observables.
 
@@ -204,8 +204,10 @@ $\chi$ itself.
     The step $\dimpair \to \betastar$ is not established: O24 states that it does not establish
     that capacity-to-rate step, for which no native Heisenberg growth carrier is defined; O25 and
     O14 record that the reciprocal prescription yields no $\betastar$ diagnostic from these data;
-    and the Span-Growth Note~\cite{Beau2026sgn} proves that the expander-derived conversion law
-    does not transfer to the Heisenberg substrate.
+    O15~\cite{Beau2026a19} states the Heisenberg transfer no-go, any resolution requiring a new
+    growth carrier or an explicit cross-substrate hypothesis; and the Span-Growth
+    Note~\cite{Beau2026sgn} proves that the expander-derived conversion law does not transfer to
+    the Heisenberg substrate.
     The asymptotic numerical stabilisation of $\dimpair(q)$ as $q \to \infty$ is a
     separate analytical and numerical question, recorded as open in
     Section~\ref{sec:open-hyp}.
@@ -235,8 +237,9 @@ $\chi$ itself.
       \item The \emph{admissibility thread} $Q_8 \subset 2I \subset \SU(2)$ is an output of
       the sub-programme, not an input.
       $Q_8$ is the minimal non-abelian finite subgroup of $\SU(2)$ compatible with bounded-flux
-      admissibility; $2I$ is the maximal admissible finite subgroup; the LPS family provides the
-      Ramanujan approximation to $\SU(2)$ in the large-$q$ limit.
+      admissibility; $2I$ maximises the capacity functional at the verified valences
+      $d \in \{6, 12, 24\}$, its maximality for general $d$ remaining a conjecture; the LPS family
+      provides the Ramanujan approximation to $\SU(2)$ in the large-$q$ limit.
     \end{enumerate}
 
   \section{Constituent Papers}
@@ -301,9 +304,12 @@ $\chi$ itself.
       growing relational valence, and fixes the compatibility window $\betastar \in (0.09, 0.13)$
       by matching the charged-lepton sector, anchored on $m_e/m_\tau$ (structural).
 
-      \textbf{O4}~\cite{Beau2026a8} examines whether a structural upper bound $\beta \leq 1$
-      follows from the BI flux constraint together with the Cheeger isoperimetric inequality, and
-      finds that it does not follow from that argument.
+      \textbf{O4}~\cite{Beau2026a8} examines whether a structural upper bound on the cascade
+      exponent follows from the BI flux constraint together with the Cheeger isoperimetric
+      inequality, and finds that it does not follow from that argument.
+      In O4's own convention $p(n) \sim n^\beta$ the candidate bound is $\beta \leq 2$, and the
+      rescaling that would turn it into $\beta \leq 1$ would equally move O3's window to
+      $(0.045, 0.065)$.
 
       \textbf{O5}~\cite{Beau2026a9} tests vertex-based class-function cascades on
       $\mathrm{PSL}(2,\mathbb{F}_q)$ and finds that none of the constructions it examines yields a
@@ -648,7 +654,8 @@ $\chi$ itself.
         \midrule
         $\dimpair$; the reciprocal $\betastar \approx 0.126$ is a coincidence check
           & SMchargemass, lepton hierarchy & N \\
-        Admissibility thread $Q_8 \subset 2I \subset \SU(2)$ & Q1--Q3 (quantum sector) & P \\
+        Admissibility thread $Q_8 \subset 2I \subset \SU(2)$, maximality verified at
+          $d \in \{6, 12, 24\}$ & Q1--Q3 (quantum sector) & P/C \\
         Spin-$\tfrac{1}{2}$ sector $V_\rho \cong \mathbb{C}^2$ (supplied, not derived) & Q7--Q11 (geometry) & C \\
         $\Sigma_c(n_3) = 3$ and $\Im\mathbb{H} \cong \su(2)$ (supplied carrier) & Q7 (spatial identification) & C \\
         SU(3) co-admissible triplet, withdrawn in O31 & Q6a, Gauge note & O \\
@@ -717,14 +724,18 @@ $\chi$ itself.
       but not yet fully formalised as theorems.
 
       \begin{enumerate}
-        \item \textit{Phenomenological window} (O3~\cite{Beau2026a7}): $\betastar \in (0.09, 0.13)$
-        from $m_e : m_\mu : m_\tau$.
+        \item \textit{Phenomenological window} (O3~\cite{Beau2026a7}): $\betastar \in (0.09, 0.13)$,
+        matching the charged-lepton sector and anchored on $m_e/m_\tau$.
 
-        \item \textit{Capacity exponent target} (O7~\cite{Beau2026a11}): the target
-        $\delta \in [7.4, 10.6]$ on three-step path fingerprints.
+        \item \textit{Capacity exponent target} (O7~\cite{Beau2026a11}): the decay condition
+        $\bar\Sigma_n \sim p(n)^{-\delta}$ with $\delta \in [7.4, 10.6]$ in a measurable
+        pre-saturation window; the three-step construction that tests it is O8's.
 
-        \item \textit{Observable-class identification} (O16~\cite{Beau2026a20}): the pair
-        observable resolves the gap by exponent doubling $\dimpair = 2\delta_c$.
+        \item \textit{Observable-class identification} (O16~\cite{Beau2026a20}): under a
+        constant conjugate-pair ratio, the pair product doubles the log-log slope.
+        On the exact block observable that ratio is identically one, so the product reduces to the
+        single block squared and no doubling phenomenon arises there; O16 asserts no value of
+        $\dimpair$.
 
       \end{enumerate}
 
@@ -762,8 +773,10 @@ $\chi$ itself.
 
       \begin{enumerate}
         \item \textit{$\delta_{\mathrm{corr}}(q) \in [7.7, 9.0]$} (O25~\cite{Beau2026a29}): for
-        $q \in \{61, 101, 151, 211\}$ after the finite-size adjustment; within the target window
-        $[7.4, 10.6]$.
+        $q \in \{61, 101, 151, 211\}$ after the finite-size adjustment.
+        O25 assigns the window agreement to the raw exponent, which descends into
+        $[7.4, 10.6]$ unaided and reaches $7.61$ at $q = 601$, the adjustment overcorrecting to
+        $6.53$ there.
 
         \item \textit{Effective rank} (O28~\cite{Beau2026a32}, O29~\cite{Beau2026a33}):
         $r_{\mathrm{eff}} = 3$ for every conjugate pair at $q \in \{61, 101, 151\}$ in O28's
@@ -796,8 +809,10 @@ $\chi$ itself.
         Note~\cite{Beau2026ccnote}, which gives $n_1(q) \to 22$ in probability and
         $x_1(q) \asymp q^{-2}$, so $n_1(q)/q \to 0$.
 
-        \item \textit{Extension to $q = 401$}: the campaign at $q \in \{29, 61, 101, 151, 211, 307\}$
-        is complete; $q = 401$ is pending.
+        \item \textit{Breadth of the campaign}: the pair-level campaign is complete at full
+        breadth for $q \in \{29, 61, 101, 151, 211\}$, and O25 extends it to
+        $q \in \{307, 401, 601\}$ at reduced sampling, so the large-$q$ dispersion there is
+        inflated by the reduced pair count.
       \end{enumerate}
 
   \section{Open Deliverables}

@@ -47,8 +47,8 @@ $\beta^* \approx 1/(\delta_{\mathrm{pair}} + \tfrac{1}{2})$ has no carrier on th
 Heisenberg measurement substrate, and the **Span-Growth Note** proves that the
 expander-derived conversion does not transfer there. The agreement of
 $\beta^* \approx 0.126$ with the phenomenological window
-$\beta^* \in (0.09, 0.13)$ from the charged-lepton mass ratios
-$m_e : m_\mu : m_\tau$ is a coincidence check, not a derivation.
+$\beta^* \in (0.09, 0.13)$, which O3 fixes by matching the charged-lepton
+sector, is a coincidence check, not a derivation.
 The group-theoretic extensions are conditional or withdrawn: the
 $\mathfrak{su}(2)$ identification rests on a supplied carrier, and the $SU(3)$
 extension is withdrawn.
@@ -90,7 +90,7 @@ organised into internal phases:
 | Pair + transfer | O16–O24 | $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}}$ fibre-conditionality closed | C |
 | Numerical + sector | O25–O30 | $\delta_{\mathrm{corr}}$ diagnostic; $r_{\mathrm{eff}} = 3$ finite-data | N/C |
 | SU(3) / colour | O31–O32 | O31 withdrawn; O32 measurements stand | O |
-| Mass architecture | O33 | finite spectral architecture for mass-square splitting | S |
+| Spectral architecture | O33 | exact doublets and protected sectors, no Standard-Model identification | P |
 | Companion notes | Span-Growth, Critical Coverage | transfer failure; exact depth law | P |
 
 Status codes: **P** = proved, **S** = structural, **N** = numerical,

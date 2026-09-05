@@ -26,7 +26,8 @@
   pdfsubject={Map of the spectral admissibility sub-programme: constituent papers, phases,
     and the status of every result},
   pdfkeywords={spectral admissibility, Born--Infeld constraint, Weil representation,
-    Heisenberg group, pair observable, capacity exponent, presentation note}
+    Heisenberg group, pair observable, capacity exponent, lepton mass hierarchy, SU(3),
+    colour triplet, non-injective projection, presentation note}
 }
 
 \theoremstyle{definition}
@@ -87,7 +88,7 @@
     On the SU(2) side the carrier is supplied conditionally rather than derived, and on the
     SU(3) side the O31 record is a withdrawal notice, so the colour group and the Standard Model
     gauge group are open.
-    This note maps the constituent papers, identifies four internal phases, records the
+    This note maps the constituent papers, identifies the internal phases, records the
     status of every result as proved, structural, numerical, conditional, or open, and states the
     open deliverables: hypothesis~$[\mathrm{H\text{-}color}]$, of which the two levels
     established in O32 stand while those that rested on O31 are not currently asserted; the
@@ -145,10 +146,10 @@
     Branch~I establishes the axiomatic primitive: admissible non-injective transitions as the
     primitive of physical description~\cite{Beau2026m}, with the structural necessity of
     non-injectivity~\cite{Beau2026l}.
-    The selection of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ and its Weil representation from those
-    axioms is \emph{not} a theorem: HeisenbergStructure~\cite{Beau2026HeisenbergStructure}
-    disproves that implication by an explicit six-element countermodel, so the carrier is a
-    supplied realisation on which this sub-programme's mathematics is conducted.
+    The selection of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ from those axioms is \emph{not} a
+    theorem: HeisenbergStructure~\cite{Beau2026HeisenbergStructure} disproves that implication by
+    an explicit six-element countermodel, and the Weil action is a further supplied object, so this
+    sub-programme's mathematics is conducted on a supplied carrier.
     Branch~II is the spectral admissibility sub-programme (this note).
     Branch~III derives quantum mechanics, spacetime geometry, gauge structure, and
     fermionic matter from Branch~I axioms and Branch~II spectral data.
@@ -248,7 +249,7 @@ $\chi$ itself.
     \subsection{Precursor papers: SU(2) admissibility sub-programme}
       \label{sec:precursor}
 
-      Four papers precede the O-series proper and explore spectral admissibility on Cayley graphs
+      Five papers precede the O-series proper and explore spectral admissibility on Cayley graphs
       of finite $\SU(2)$ subgroups.
 
       \textbf{SpectralAdmissibility}~\cite{Beau2026a1} carries out the spectral admissibility
@@ -535,11 +536,16 @@ $\chi$ itself.
       Its measurements stand as measurements; they do not support the withdrawn colour-group
       derivation.
       Results for $q \in \{61, 151, 211\}$ (test, $q \equiv 1 \pmod 3$) and
-      $q \in \{29, 101\}$ (control, $q \equiv 2 \pmod 3$): hypothesis~$[\mathrm{H\text{-}color}]$
-      passes all three test primes; $q = 307$ confirms ($R_{\mathrm{var}} = 0.7$, all 4 triplets).
+      $q \in \{29, 101\}$ (control, $q \equiv 2 \pmod 3$).
+      Against the noise floor $\mathtt{ctrl\_ref} = 1.657 \times 10^{-3}$ and the criterion
+      $R \leq 3$, the normalised ratios are $R = 2.1$ at $q = 61$, $0.4$ at $q = 151$, $1.0$ at
+      $q = 211$ and $0.7$ at $q = 307$: the test passes at all four.
 
       \textbf{O33}~\cite{Beau2026a37} gives a finite spectral architecture for mass-square
-      splitting and mixing: exact doublets and protected sectors from Weil admissibility.
+      splitting and mixing: exact doublets and protected sectors from Weil admissibility, proved.
+      It makes no identification with a Standard-Model representation, and derives neither Dirac
+      masses, nor an absolute mass scale, nor generations, nor hypercharge, nor a matter-sector
+      Higgs mechanism.
 
       \subsubsection*{Companion notes}
 
@@ -576,7 +582,8 @@ $\chi$ itself.
           Numerical + sector & O25--O30 & $\delta_{\mathrm{corr}}$ diagnostic;
             $r_{\mathrm{eff}} = 3$ finite-data & N/C \\
           SU(3) / colour & O31--O32 & O31 withdrawn; O32 measurements stand & O \\
-          Mass architecture & O33 & Finite spectral architecture for mass-square splitting & S \\
+          Spectral architecture & O33 & Exact doublets and protected sectors, no
+            Standard-Model identification & P \\
           Companion notes & Span-Growth, Critical Coverage & Transfer failure; exact depth law & P \\
           \bottomrule
         \end{tabular}
@@ -592,9 +599,12 @@ $\chi$ itself.
       $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ and its Weil representation, taken as a supplied carrier.
       The two-dimensional module $V_\rho$ of the later sections is a further supplied object,
       selected by O26 minimality, and is not the Weil representation itself.
-      HeisenbergStructure~\cite{Beau2026HeisenbergStructure} disproves their selection from the
-      axioms A1--A4 by an explicit six-element countermodel, so the carrier is a supplied
-      realisation and the mathematics of this sub-programme is conducted on it.
+      HeisenbergStructure~\cite{Beau2026HeisenbergStructure} disproves the selection of the finite
+      Heisenberg group and its irreducible carrier from the axioms A1--A4, by an explicit
+      six-element countermodel; the Weil action is a further representation of the symplectic
+      automorphism group, which Stone--von Neumann does not by itself supply.
+      Both are therefore supplied realisations, and the mathematics of this sub-programme is
+      conducted on them.
 
       \item \textbf{BI saturation functional.}
       The Born--Infeld action with saturation constant $\cchi$ is the unique analytic completion
@@ -608,9 +618,11 @@ $\chi$ itself.
       downstream constructions, the fibre identification remaining an open problem.
 
       \item \textbf{Noscale principle.}
-      The absence of an external dimensional scale at the admissibility level~\cite{Beau2026j}
-      ensures that the only dimensionful parameter available to the sub-programme is $\cchi$,
-      enforcing the internal consistency of the capacity law.
+      No independent dimensional parameter can be introduced at the admissibility level without
+      breaking the axioms or BFS-consistent scaling~\cite{Beau2026j}, so the only dimensionful
+      parameter available to the sub-programme is $\cchi$.
+      The stronger statement, that this determines the capacity law functionally, is left open
+      there.
     \end{enumerate}
 
     \noindent No result from Branch~III is an input to the sub-programme.
@@ -639,7 +651,7 @@ $\chi$ itself.
         Admissibility thread $Q_8 \subset 2I \subset \SU(2)$ & Q1--Q3 (quantum sector) & P \\
         Spin-$\tfrac{1}{2}$ sector $V_\rho \cong \mathbb{C}^2$ (supplied, not derived) & Q7--Q11 (geometry) & C \\
         $\Sigma_c(n_3) = 3$ and $\Im\mathbb{H} \cong \su(2)$ (supplied carrier) & Q7 (spatial identification) & C \\
-        SU(3) co-admissible triplet & Q6a, Gauge note & withdrawn \\
+        SU(3) co-admissible triplet, withdrawn in O31 & Q6a, Gauge note & O \\
         $\delta_{\mathrm{corr}}(q) \in [7.4, 10.6]$ for $q \in \{61,\ldots,211\}$,
           a declared adjustment & Open: $q \to \infty$ limit & N \\
         \bottomrule
@@ -762,8 +774,9 @@ $\chi$ itself.
         resolved across the measured pairs, with no analytical derivation.
 
         \item \textit{$[\mathrm{H\text{-}color}]$ numerical support} (O32~\cite{Beau2026a36}):
-        passes for $q \in \{61, 151, 211, 307\}$ with variance ratio $R_{\mathrm{var}} \leq 1$
-        relative to the control noise floor.
+        the normalised ratio $R$ satisfies the criterion $R \leq 3$ at
+        $q \in \{61, 151, 211, 307\}$, with values $2.1$, $0.4$, $1.0$ and $0.7$ against the
+        noise floor $1.657 \times 10^{-3}$.
       \end{enumerate}
 
     \subsection{Open hypotheses}
@@ -811,8 +824,8 @@ $\chi$ itself.
     extended in O25 to $q \in \{307, 401, 601\}$ at reduced sampling ($M = 16$ at $307$, $M = 8$
     and twelve pairs at $401$ and $601$), so the large-$q$ dispersion there is inflated by the
     reduced pair count.
-    At $q = 307$ the O32 variance test passes on all 4/4 triplets
-    ($R_{\mathrm{var}} = 1.17 \times 10^{-3}$,~\cite{Beau2026a36}).
+    At $q = 307$ the O32 test gives window variance $1.17 \times 10^{-3}$ and normalised ratio
+    $R = 0.7$, inside its criterion~\cite{Beau2026a36}.
     What remains is breadth rather than reach: a full-breadth run beyond $q = 211$ would
     constrain the convergence of $n_1(q)/q$ and supply an uninflated data point for the
     $R_{\mathrm{var}}(q) \propto q^{-1}$ scaling.

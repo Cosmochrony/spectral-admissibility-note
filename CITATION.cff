@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you cite this work, please use the metadata from this file."
-title: "The Spectral Admissibility Sub-Programme Presentation Note 1"
+title: "The Spectral Admissibility Sub-Programme — Presentation Note 1"
 type: article
 authors:
   - family-names: "Beau"
@@ -12,7 +12,7 @@ doi: "10.5281/zenodo.20402946"
 license: "CC-BY-4.0"
 preferred-citation:
   type: article
-  title: "The Spectral Admissibility Sub-Programme Presentation Note 1"
+  title: "The Spectral Admissibility Sub-Programme — Presentation Note 1"
   authors:
     - family-names: "Beau"
       given-names: "Jérôme"

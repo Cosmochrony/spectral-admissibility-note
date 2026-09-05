@@ -20,7 +20,13 @@
   colorlinks=true,
   linkcolor=black,
   citecolor=black,
-  urlcolor=black
+  urlcolor=black,
+  pdftitle={The Spectral Admissibility Sub-Programme --- Presentation Note 1},
+  pdfauthor={J\'er\^ome Beau},
+  pdfsubject={Map of the spectral admissibility sub-programme: constituent papers, phases,
+    and the status of every result},
+  pdfkeywords={spectral admissibility, Born--Infeld constraint, Weil representation,
+    Heisenberg group, pair observable, capacity exponent, presentation note}
 }
 
 \theoremstyle{definition}
@@ -60,7 +66,7 @@
     central question: which spectral sectors of the Weil representation of
     $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ survive the Born--Infeld bounded-flux constraint?
     The answer organises the entire O-series (papers O1--O32 and five precursor papers)
-    into a logically closed derivation chain:
+    along a single derivation chain:
     \[
       \text{bounded flux}
       \;\Longrightarrow\;
@@ -72,10 +78,15 @@
       \;\Longrightarrow\;
       \betastar \approx 0.126.
     \]
+    Its transfer segment is closed by O24; its group-theoretic extensions are not.
+    On the SU(2) side the carrier is supplied conditionally rather than derived, and on the
+    SU(3) side the O31 record is a withdrawal notice, so the colour group and the Standard Model
+    gauge group are open.
     This note maps the constituent papers, identifies four internal phases, records the
-    status of every result as proved, structural, or open, and states the two remaining open
-    deliverables: the pointwise analytical proof of hypothesis~$[\mathrm{H\text{-}color}]$
-    (partially resolved at three levels in O32) and the extension of the numerical campaign
+    status of every result as proved, structural, numerical, conditional, or open, and states the
+    open deliverables: hypothesis~$[\mathrm{H\text{-}color}]$, of which the two levels
+    established in O32 stand while those that rested on O31 are not currently asserted; the
+    identification of the spin-$\tfrac{1}{2}$ sector; and the extension of the numerical campaign
     to $q = 401$.
   \end{abstract}
 
@@ -178,8 +189,10 @@ $\chi$ itself.
     The asymptotic numerical stabilisation of $\dimpair(q)$ as $q \to \infty$ is a
     separate analytical and numerical question, recorded as open in
     Section~\ref{sec:open-hyp}.
-    The sole conditionality on the \emph{group-theoretic} side concerns the SU(3) sector,
-    which requires hypothesis~$[\mathrm{H\text{-}color}]$ (Section~\ref{sec:open}).
+    The group-theoretic side carries conditionality on both sectors.
+    The SU(2) identification rests on the carrier supplied conditionally by O23, and the SU(3)
+    sector requires hypothesis~$[\mathrm{H\text{-}color}]$ while its O31 support is withdrawn
+    (Section~\ref{sec:open}).
 
     \medskip
     Three structural facts underlie the chain and should not be confused.
@@ -370,52 +383,78 @@ $\chi$ itself.
       $q \in \{29, 61, 101, 151, 211\}$.
       Results: $\bar\delta_{\mathrm{pair}} \in \{8.89, 9.98, 9.55, 9.13, 8.78\}$ with inter-pair
       standard deviation decreasing from 0.54 to 0.11.
-      After the O14 normalisation correction, values $\delta_{\mathrm{corr}}(q) \in [7.7, 9.0]$
-      fall consistently within the admissible window $[7.4, 10.6]$ for
+      After the finite-size adjustment $\eta \log q / \log n_1(q)$, the adjusted values
+      $\delta_{\mathrm{corr}}(q) \in [7.7, 9.0]$ fall within the target window $[7.4, 10.6]$ for
       $q \in \{61, 101, 151, 211\}$.
+      O14~\cite{Beau2026a18} establishes that this term leaves a fixed-$q$ fitted slope invariant,
+      so the adjustment is a declared diagnostic and not a correction of the fitted exponent.
 
       \textbf{O26}~\cite{Beau2026a30} establishes the quadratic completion of admissible
       spectral pairs via binary-icosahedral representation, providing the Level~III
       identification criterion for the spin-$\tfrac{1}{2}$ sector.
 
-      \textbf{O27}~\cite{Beau2026a31} proves that every admissible morphism $\Phi_{q,\rho}$
-      necessarily factors through $\su(2)$ (quaternionic rigidity theorem, proved
-      unconditionally).
-      The identification chain becomes:
+      \textbf{O27}~\cite{Beau2026a31} shows that every admissible morphism factors uniquely
+      through the admissibility quotient, and exhibits the canonical representation action
+      $\rho \colon \su(2) \to \End(V_\rho)$ under two premises: the identification of the
+      admissible image with the neutral traceless sector, which O27 assumes and derives nowhere,
+      and the spinor carrier supplied conditionally by O23.
+      The intertwiner space is one-dimensional, so an equivariant map is unique only up to a
+      scalar, and no non-zero equivariant map reaches the fundamental from the adjoint, so the
+      vector lift of O26 Hypothesis~4.4 remains open.
+      The identification chain reads, with arrows of unequal type:
       \[
-        \text{emergence} \Rightarrow \su(2)\;[\text{O27}]
-        \Rightarrow H_{\mathrm{eff}} \cong \Sym^2(V_\rho)\;\text{(spin-$1$)}\;[\text{O29}]
-        \Rightarrow r_{\mathrm{eff}} = 3\;\text{(carrier)},\; d_\rho = 2\;\text{(square-root)}\;[\text{O29}].
+        \text{emergence} \Rightarrow \su(2)\;[\text{O27, conditional}]
+        \Rightarrow r_{\mathrm{eff}} = 3\;\text{[O28, measured; O29, audited]}.
       \]
+      No step of it identifies a representation carrier.
 
-      \textbf{O28}~\cite{Beau2026a32} confirms asymptotic calibration of the BFS window:
-      $\delta_{\mathrm{corr}}(q) \in [7.4, 10.6]$ for all $q \in \{29, 61, 101, 151, 211\}$;
-      the covariance $C_c$ in $\End(H_{\mathrm{eff}})$ has rank exactly 3 for every conjugate
-      pair at $q \in \{61, 101, 151\}$, with invariant eigenvalue structure
-      $[1 : \tfrac{1}{2} : \tfrac{1}{2}]$.
+      \textbf{O28}~\cite{Beau2026a32} calibrates the BFS window out of sample, where the fitted
+      linear extrapolation fails, and reports the adjusted $\delta_{\mathrm{corr}}(q)$ within
+      $[7.4, 10.6]$ over $q \in \{29, 61, 101, 151, 211\}$.
+      In the samples of its perimeter the covariance $C_c$ in $\End(H_{\mathrm{eff}})$ has $1\%$
+      threshold rank $3$ for every conjugate pair at $q \in \{61, 101, 151\}$, with resolved
+      spectrum $[1 : \tfrac{1}{2} : \tfrac{1}{2}]$.
+      That value is finite-data and not an invariant: the extended recomputation of O29 finds rank
+      three modal, at $32/50$ pairs for $q = 101$ and $103/105$ for $q = 211$.
 
-      \textbf{O29}~\cite{Beau2026a33} identifies the carrier $H_{\mathrm{eff}} \cong \Sym^2(V_\rho)$
-      (spin-$1$): $r_{\mathrm{eff}} = 3$ confirmed numerically for $q \in \{61, 101, 151\}$, with $d_\rho = 2$
-      the spin-$\tfrac{1}{2}$ square-root doublet recovered via the Veronese structure, not the rank measured
-      by Test~4.
+      \textbf{O29}~\cite{Beau2026a33} audits what that measurement identifies, and reaches no
+      representation.
+      It separates the measured trajectory span in $H_{\mathrm{eff}}$, a data-dependent leading
+      truncation inside it, and the spin-$\tfrac{1}{2}$ module $V_\rho$, which is supplied
+      elsewhere.
+      Its finite-precision diagnostics are compatible with an adjoint reading of
+      $H_{\mathrm{eff}}$ without deriving that carrier or proving exact irreducibility, and no
+      Veronese square root is recovered there.
+      The doublet dimension $d_\rho = 2$ is the minimality selection of O26, not a measurement of
+      these data.
 
-      \textbf{O30}~\cite{Beau2026a34} derives analytically the invariant eigenvalue ratio
-      $\lambda_1/\lambda_2 = 2$ of the per-pair covariance: Born--Infeld parity anti-linearity
-      forces an equatorial constraint on the admissible fibre, and the factor of two is purely
-      structural (squared symmetric-tensor normalisation of the Carnot-degree-2 central generator
-      $Z = [X, Y]$, proved).
+      \textbf{O30}~\cite{Beau2026a34} gives a conditional $3\times3$ model on $\Sym^2(V_\rho)$ in
+      which the ratio $\lambda_1/\lambda_2 = 2$ follows from an equatorial constraint, under its
+      hypotheses (H0)--(H3) and, for the spectrum, two weighted decorrelation conditions.
+      The factor of two is the squared symmetric-tensor normalisation of the direction the Carnot
+      grading identifies as central.
+      That model is not the $9\times9$ covariance measured in O28, and O30 supplies no analytical
+      account of it.
 
-      \textbf{O31}~\cite{Beau2026a35} develops the structural framework for SU(3) emergence.
-      Metaplectic intertwining of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ forces triplet
-      co-admissibility unconditionally for the colour-adapted Cayley graph $\Cay(G_q, S_q^{(3)})$.
-      SU(3) is identified as the symmetry group of the co-admissible colour triplet, proved
-      for the standard generating set via Proposition~4.23 of O31
-      (single-frequency fingerprint structure).
-      O31 also closes the spectral approach to $[\mathrm{H\text{-}color}]$: exact
-      generator-twist isospectrality does not imply colour-triplet spectral degeneracy.
+      \textbf{O31}~\cite{Beau2026a35} is a withdrawal notice.
+      It withdraws the uniqueness of $\SU(3)$ among connected compact subgroups acting irreducibly
+      on $\mathbb{C}^3$, the irreducibility of the group of Born--Infeld-compatible
+      fibre-preserving transformations, the co-admissibility of the individual profiles, the
+      arithmetic criterion tying colour triplets to $q \equiv 1 \pmod 3$, the metaplectic identity
+      as it was used, the $\Delta(27)$ spectral proposition, a mistyped rank-eight test in
+      $\End(\mathbb{C}^3)$, and every derivation of a gauge factor or of the Standard Model gauge
+      group as a composite.
+      Three counterexamples are given there; $\mathrm{SO}(3) \subset \SU(3)$ alone defeats the uniqueness
+      claim.
+      The scalar, arithmetic and discrete-group material of the superseded version, including the
+      generator-twist isospectrality statement, is under re-audit there and is not asserted.
+      The notice records that any dependent claim elsewhere resting on a withdrawn result is to be
+      treated as unsupported until separately re-examined.
 
       \textbf{O32}~\cite{Beau2026a36} provides the numerical test of $[\mathrm{H\text{-}color}]$
       on the standard graph.
+      Its measurements stand as measurements; they do not support the withdrawn colour-group
+      derivation.
       Results for $q \in \{61, 151, 211\}$ (test, $q \equiv 1 \pmod 3$) and
       $q \in \{29, 101\}$ (control, $q \equiv 2 \pmod 3$): hypothesis~$[\mathrm{H\text{-}color}]$
       passes all three test primes; $q = 307$ confirms ($R_{\mathrm{var}} = 0.7$, all 4 triplets).
@@ -423,7 +462,7 @@ $\chi$ itself.
       \begin{table}[ht]
         \centering
         \caption{Summary of the O-series by internal phase.
-        Status codes: P = proved; S = structural; N = numerical; O = open.}
+        Status codes: P = proved; S = structural; N = numerical; C = conditional; O = open.}
         \label{tab:papers}
         \renewcommand{\arraystretch}{1.2}
         \begin{tabular}{@{}lllll@{}}
@@ -434,8 +473,8 @@ $\chi$ itself.
           LPS phase & SpRel, O1--O8 & $\beta \leq 1$; geometric obstruction & P \\
           Heisenberg transition & O9--O15 & Exact $\hat\delta_{\mathrm{exact}} \approx 4.5$; no-go & P \\
           Pair + transfer & O16--O24 & $\cchi \to \dimpair \to \betastar$, unconditional & P \\
-          Numerical + sector & O25--O30 & $\delta_{\mathrm{corr}} \in [7.4, 10.6]$; $d_\rho = 2$ & P/N \\
-          SU(3) / colour & O31--O32 & $\SU(3)$ unconditional; $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$ proved & P \\
+          Numerical + sector & O25--O30 & $\delta_{\mathrm{corr}}$ diagnostic; $r_{\mathrm{eff}} = 3$ & N/C \\
+          SU(3) / colour & O31--O32 & O31 withdrawn; O32 measurements stand & O \\
           \bottomrule
         \end{tabular}
       \end{table}
@@ -480,7 +519,8 @@ $\chi$ itself.
 
     \begin{table}[ht]
       \centering
-      \caption{Principal outputs of the spectral admissibility sub-programme and their consumers.}
+      \caption{Principal outputs of the spectral admissibility sub-programme and their consumers.
+        Status codes as in Table~\ref{tab:papers}.}
       \label{tab:outputs}
       \renewcommand{\arraystretch}{1.3}
       \begin{tabular}{@{}p{5.5cm}p{4.5cm}l@{}}
@@ -489,9 +529,9 @@ $\chi$ itself.
         \midrule
         $\betastar \approx 0.126$ & SMchargemass, lepton hierarchy & P \\
         Admissibility thread $Q_8 \subset 2I \subset \SU(2)$ & Q1--Q3 (quantum sector) & P \\
-        Spin-$\tfrac{1}{2}$ sector $V_\rho \cong \mathbb{C}^2$ & Q7--Q11 (geometry) & P \\
-        $\Sigma_c(n_3) = 3$ and $\Im\mathbb{H} \cong \su(2)$ & Q7 (spatial identification) & P \\
-        SU(3) co-admissible triplet (unconditional, O31~v1.5) & Q6a, Gauge note & P \\
+        Spin-$\tfrac{1}{2}$ sector $V_\rho \cong \mathbb{C}^2$ (supplied, not derived) & Q7--Q11 (geometry) & C \\
+        $\Sigma_c(n_3) = 3$ and $\Im\mathbb{H} \cong \su(2)$ (supplied carrier) & Q7 (spatial identification) & C \\
+        SU(3) co-admissible triplet & Q6a, Gauge note & withdrawn \\
         $\delta_{\mathrm{corr}}(q) \in [7.4, 10.6]$ for $q \in \{61,\ldots,211\}$ & Open: $q \to \infty$ limit & N \\
         \bottomrule
       \end{tabular}
@@ -542,17 +582,10 @@ $\chi$ itself.
         Lemma closes $\cchi \to \dimpair \to \betastar \approx 0.126$ without residual
         conditionality on the fibre structure.
 
-        \item \textit{Quaternionic rigidity} (O27~\cite{Beau2026a31}): every admissible morphism
-        $\Phi_{q,\rho}$ factors through $\su(2)$.
-
-        \item \textit{Eigenvalue ratio} (O30~\cite{Beau2026a34}): the invariant ratio
-        $\lambda_1/\lambda_2 = 2$ of the per-pair covariance is analytically derived from the
-        equatorial admissible fibre constraint.
-
-        \item \textit{Generator-twist isospectrality} (O31~\cite{Beau2026a35}): the spectra of
-        $\rho_c(P_{S_q})$ and $\rho_c(P_{\varphi_\omega(S_q)})$ are equal for all $c$, but this
-        does not imply colour-triplet spectral degeneracy.
-        This closes the spectral route to $[\mathrm{H\text{-}color}]$.
+        \item \textit{Admissible factorisation} (O27~\cite{Beau2026a31}): every admissible
+        morphism factors uniquely through the admissibility quotient.
+        Identifying that quotient with $\su(2)$ is conditional on the neutral-sector identification
+        O27 assumes and on O23's supplied carrier, so it does not belong to this list.
       \end{enumerate}
 
     \subsection{Structural results}
@@ -571,9 +604,33 @@ $\chi$ itself.
         \item \textit{Observable-class identification} (O16~\cite{Beau2026a20}): the pair
         observable resolves the gap by exponent doubling $\dimpair = 2\delta_c$.
 
-        \item \textit{SU(3) emergence framework} (O31~\cite{Beau2026a35}): the metaplectic
-        intertwining of $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ forces triplet co-admissibility
-        unconditionally for the colour-adapted Cayley graph.
+      \end{enumerate}
+
+      The SU(3) emergence framework formerly listed here rested on the metaplectic identity that
+      O31~\cite{Beau2026a35} withdraws, and is not asserted.
+
+    \subsection{Conditional results}
+      \label{sec:conditional}
+
+      The following hold under premises supplied elsewhere and not derived within the
+      sub-programme.
+
+      \begin{enumerate}
+        \item \textit{The $\su(2)$ identification} (O27~\cite{Beau2026a31}, O23~\cite{Beau2026a27}):
+        conditional on the identification of the admissible image with the neutral traceless
+        sector and on O23's supplied spinor carrier.
+
+        \item \textit{The doublet dimension $d_\rho = 2$} (O26~\cite{Beau2026a30}): a minimality
+        selection, not a measurement of the checkpoint data.
+
+        \item \textit{The eigenvalue ratio $\lambda_1/\lambda_2 = 2$} (O30~\cite{Beau2026a34}):
+        in a conditional $3\times3$ model on $\Sym^2(V_\rho)$, under (H0)--(H3) and two weighted
+        decorrelation conditions.
+        It is not an account of the $9\times9$ covariance measured in O28.
+
+        \item \textit{The adjoint reading of $H_{\mathrm{eff}}$} (O29~\cite{Beau2026a33}):
+        supplied rather than derived; the finite-precision diagnostics are compatible with it and
+        do not establish it.
       \end{enumerate}
 
     \subsection{Numerical evidence}
@@ -583,14 +640,16 @@ $\chi$ itself.
 
       \begin{enumerate}
         \item \textit{$\delta_{\mathrm{corr}}(q) \in [7.7, 9.0]$} (O25~\cite{Beau2026a29}): for
-        $q \in \{61, 101, 151, 211\}$ after O14 normalisation; consistently within the admissible
-        window $[7.4, 10.6]$.
+        $q \in \{61, 101, 151, 211\}$ after the finite-size adjustment; within the target window
+        $[7.4, 10.6]$.
 
-        \item \textit{Spin-$\tfrac{1}{2}$ sector} (O29~\cite{Beau2026a33}): $r_{\mathrm{eff}} = 3$
-        and $d_\rho = 2$ confirmed for $q \in \{61, 101, 151\}$.
+        \item \textit{Effective rank} (O28~\cite{Beau2026a32}, O29~\cite{Beau2026a33}):
+        $r_{\mathrm{eff}} = 3$ for every conjugate pair at $q \in \{61, 101, 151\}$ in O28's
+        perimeter; modal rather than invariant in O29's extended recomputation, at $32/50$ pairs
+        for $q = 101$ and $103/105$ for $q = 211$.
 
         \item \textit{Eigenvalue structure $[1:\tfrac{1}{2}:\tfrac{1}{2}]$} (O28~\cite{Beau2026a32}):
-        robust across all conjugate pairs and all tested primes.
+        resolved across the measured pairs, with no analytical derivation.
 
         \item \textit{$[\mathrm{H\text{-}color}]$ numerical support} (O32~\cite{Beau2026a36}):
         passes for $q \in \{61, 151, 211, 307\}$ with variance ratio $R_{\mathrm{var}} \leq 1$
@@ -603,12 +662,10 @@ $\chi$ itself.
       The following items remain open within the sub-programme.
 
       \begin{enumerate}
-        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$}:
-        proved analytically in O31 (Proposition~4.23,~\cite{Beau2026a35}): each O12
-        fingerprint vector carries a single frequency
-        $B = c_1 b_1 + c_2 b_2 + c_3 b_3$, and the orbit dilation $B \mapsto \omega B$
-        is a bijection of $\mathbb{Z}/q\mathbb{Z}$.
-        Together with the three prior levels, $[\mathrm{H\text{-}color}]$ is fully established.
+        \item \textit{$[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$}: open.
+        The single-frequency argument for it belonged to the superseded version of O31 and is not
+        asserted by the current record~\cite{Beau2026a35}, which is a withdrawal notice; nothing
+        there refutes the argument, and no result of the sub-programme currently establishes it.
 
         \item \textit{Asymptotic stabilisation of $\delta_\infty$}: the limit
         $\delta_\infty = \lim_{q \to \infty} \dimpair(q)$ has not been computed analytically.
@@ -621,23 +678,26 @@ $\chi$ itself.
   \section{Open Deliverables}
     \label{sec:open}
 
-    Two open deliverables define the boundary of the sub-programme as of this note.
+    Three open deliverables define the boundary of the sub-programme as of this note.
 
-    \textbf{Closed: $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$.}
-    All four levels of $[\mathrm{H\text{-}color}]$ are now analytically established.
-    (i)~$[\mathrm{H\text{-}color}]_{\mathrm{rank}}$: sector rank equality
-    $r_c(n) = r_{\omega c}(n) = r_{\omega^2 c}(n)$ proved unconditionally in
-    O31~\cite{Beau2026a35} via intra-coset Vandermonde symmetry.
-    (ii)~$[\mathrm{H\text{-}color}]_{\mathrm{avg}}$: proved in O32 (Proposition~1) to $O(q^{-1})$.
-    (iii)~$[\mathrm{H\text{-}color}]_{\mathrm{eff}}$: proved in O32 in the $q \to \infty$ limit.
-    (iv)~$[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$: proved in O31
-    (Proposition~4.23,~\cite{Beau2026a35}) via the single-frequency fingerprint structure.
-    The $\SU(3)$ identification on the standard graph is therefore fully unconditional.
+    \textbf{Open deliverable 1: $[\mathrm{H\text{-}color}]$.}
+    Of its four levels, two stand and two do not.
+    (ii)~$[\mathrm{H\text{-}color}]_{\mathrm{avg}}$ is proved in O32 (Proposition~1) to
+    $O(q^{-1})$, and (iii)~$[\mathrm{H\text{-}color}]_{\mathrm{eff}}$ in O32 in the
+    $q \to \infty$ limit; both stand.
+    (i)~$[\mathrm{H\text{-}color}]_{\mathrm{rank}}$ and
+    (iv)~$[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$ rested on the superseded version of
+    O31~\cite{Beau2026a35}, whose current record asserts neither; they are open.
+    No $\SU(3)$ identification follows on either graph.
 
-    \textbf{Open deliverable 2: Numerical campaign at $q = 401$.}
+    \textbf{Open deliverable 2: the spin-$\tfrac{1}{2}$ identification.}
+    The carrier is supplied by O23 and selected by O26 minimality; the vector lift of O26
+    Hypothesis~4.4 is open, and no measurement of the sub-programme identifies $V_\rho$.
+
+    \textbf{Open deliverable 3: Numerical campaign at $q = 401$.}
     The campaign at $q \in \{29, 61, 101, 151, 211, 307\}$ is complete.
-    $q = 307$ confirms $[\mathrm{H\text{-}color}]$ ($R_{\mathrm{var}} = 1.17 \times 10^{-3}$,
-    all 4/4 triplets, O32~\cite{Beau2026a36}).
+    At $q = 307$ the O32 variance test passes on all 4/4 triplets
+    ($R_{\mathrm{var}} = 1.17 \times 10^{-3}$,~\cite{Beau2026a36}).
     The extension to $q = 401$ is the sole remaining numerical task:
     it constrains the rate of convergence of $n_1(q)/q$ and provides the fifth data point
     for the $R_{\mathrm{var}}(q) \propto q^{-1}$ scaling prediction.
@@ -654,19 +714,21 @@ $\chi$ itself.
     Cosmochrony corpus.
     Starting from the Born--Infeld bounded-flux constraint on the Weil representation of
     $\Heis_3(\mathbb{Z}/q\mathbb{Z})$, it derives the cascade exponent $\betastar \approx 0.126$
-    unconditionally, identifies the spin-$\tfrac{1}{2}$ admissible sector, and establishes the
-    admissibility thread $Q_8 \subset 2I \subset \SU(2)$ as a structural output.
+    unconditionally, selects the spin-$\tfrac{1}{2}$ admissible sector by minimality, and
+    establishes the admissibility thread $Q_8 \subset 2I \subset \SU(2)$ as a structural output.
 
-    The sub-programme is analytically closed for the SU(2) sector.
-    It is closed numerically for $q \in \{29, 61, 101, 151, 211, 307\}$.
-    The extension to SU(3) is established unconditionally for the colour-adapted graph
-    and at all four levels on the standard graph (O31--O32,~\cite{Beau2026a35,Beau2026a36}):
-    $[\mathrm{H\text{-}color}]_{\mathrm{pointwise}}$ is proved analytically in O31
-    (Proposition~4.23), completing the $\SU(3)$ identification without residual conditionality.
+    The SU(2) sector is carried by a conditional chain rather than closed: its carrier is supplied
+    by O23 and the vector lift of O26 Hypothesis~4.4 is open.
+    The numerical campaign is complete for $q \in \{29, 61, 101, 151, 211, 307\}$.
+    The extension to SU(3) is open: O31~\cite{Beau2026a35} withdraws the colour-group derivation
+    and every derivation of a gauge factor, so neither the colour factor nor the Standard Model
+    gauge group is established here; the O32 measurements~\cite{Beau2026a36} stand on their own
+    terms.
 
     The outputs of this sub-programme are used throughout Branch~III: by the quantum sector
     (Q1--Q3), by the geometric emergence sub-programme (Q5a--Q11), by the gauge structure
-    sub-programme (Q6a, O31--O32), and by the fermionic matter papers (Q14).
+    sub-programme (Q6a, O31--O32), and by the fermionic matter papers (Q14); consumers that
+    relied on the withdrawn O31 results are to treat them as unsupported until re-examined.
     Reading the O-series without this map is possible but significantly more difficult;
     this note is intended to make the logical structure transparent before the technical
     machinery is engaged.

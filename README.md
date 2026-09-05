@@ -4,7 +4,7 @@ This repository contains the source of the **Spectral Admissibility Presentation
 This work is a **structured entry point** to the spectral admissibility
 sub-programme (Branch II of the Cosmochrony corpus), not a summary of results.
 It maps the constituent papers, identifies the internal phases, records the
-status of every result as proved, structural, numerical, or open, and states
+status of every result as proved, structural, numerical, conditional, or open, and states
 the remaining open deliverables.
 
 ## Central Question
@@ -42,8 +42,10 @@ i.e. **bounded flux** $\Rightarrow$ **admissibility envelope** $\Rightarrow$
 **Weil-sector capacity** $\Rightarrow$ **capacity exponent** $\Rightarrow$
 **cascade exponent**.
 
-The chain is *unconditional* with respect to the fibre structure of $\Pi$
-(closed in **O24**): no free parameter is adjusted to produce $\beta^*$.
+The transfer segment is *unconditional* with respect to the fibre structure of
+$\Pi$ (closed in **O24**): no free parameter is adjusted to produce $\beta^*$.
+The group-theoretic extensions are not: the $\mathfrak{su}(2)$ identification is
+conditional on a supplied carrier, and the $SU(3)$ extension is withdrawn.
 The value $\beta^* \approx 0.126$ matches the phenomenological window
 $\beta^* \in (0.09, 0.13)$ derived from the charged-lepton mass ratios
 $m_e : m_\mu : m_\tau$, making the sub-programme the primary quantitative
@@ -81,23 +83,27 @@ O-series papers**, organised into internal phases:
 | LPS phase | SpRel, O1–O8 | $\beta \leq 1$; geometric obstruction | P |
 | Heisenberg transition | O9–O15 | exact $\hat\delta_{\mathrm{exact}} \approx 4.5$; no-go | P |
 | Pair + transfer | O16–O24 | $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}} \to \beta^*$, unconditional | P |
-| Numerical + sector | O25–O30 | $\delta_{\mathrm{corr}} \in [7.4, 10.6]$; $d_\rho = 2$ | P/N |
-| SU(3) / colour | O31–O32 | $SU(3)$ conditional on $[\mathrm{H\text{-}color}]$ | S/N/O |
+| Numerical + sector | O25–O30 | $\delta_{\mathrm{corr}}$ diagnostic; $r_{\mathrm{eff}} = 3$ | N/C |
+| SU(3) / colour | O31–O32 | O31 withdrawn; O32 measurements stand | O |
 
-Status codes: **P** = proved, **S** = structural, **N** = numerical, **O** = open.
+Status codes: **P** = proved, **S** = structural, **N** = numerical,
+**C** = conditional, **O** = open.
 
 ## Open Deliverables
 
-Two open deliverables define the current boundary of the sub-programme:
+Three open deliverables define the current boundary of the sub-programme:
 
-1. **Pointwise proof of $[\mathrm{H\text{-}color}]$.**
-   Three of four levels are established analytically in **O31–O32** (sector rank
-   equality, block-averaged equality to $O(q^{-1})$, effective-exponent equality
-   in the $q \to \infty$ limit). What remains open is exact pointwise profile
-   equality at finite $q$ and $M$. The spectral route to this level is closed
-   (O31): the correct mechanism must act on the rank structure of the BFS walk,
-   not on Markov spectra.
-2. **Numerical campaign at $q = 401$.**
+1. **$[\mathrm{H\text{-}color}]$.**
+   Two of its four levels stand, both established in **O32**: block-averaged
+   equality to $O(q^{-1})$ and effective-exponent equality in the $q \to \infty$
+   limit. Sector rank equality and pointwise profile equality rested on the
+   superseded version of **O31**, whose current record is a withdrawal notice and
+   asserts neither; they are open, and no $SU(3)$ identification follows.
+2. **Spin-$\tfrac{1}{2}$ identification.**
+   The carrier is supplied by O23 and selected by O26 minimality; the vector lift
+   of O26 Hypothesis 4.4 is open, and no measurement of the sub-programme
+   identifies $V_\rho$.
+3. **Numerical campaign at $q = 401$.**
    The campaign at $q \in \{29, 61, 101, 151, 211, 307\}$ is complete;
    $q = 401$ is the sole remaining numerical task, constraining the convergence
    rate of $n_1(q)/q$ and providing a fifth data point for the
@@ -105,10 +111,11 @@ Two open deliverables define the current boundary of the sub-programme:
 
 ## Status
 
-The sub-programme is **analytically closed for the $SU(2)$ sector** and
-**numerically closed for $q \in \{29, 61, 101, 151, 211, 307\}$**.
-The extension to $SU(3)$ is conditional on hypothesis $[\mathrm{H\text{-}color}]$,
-whose analytical proof remains an open problem in Hecke spectral theory.
+The $SU(2)$ sector is **carried by a conditional chain, not closed**: its carrier
+is supplied by O23 and O26 Hypothesis 4.4 is open. The numerical campaign is
+complete for $q \in \{29, 61, 101, 151, 211, 307\}$.
+The extension to $SU(3)$ is **open**: O31 version 2.0 withdraws the colour-group
+derivation and every derivation of a gauge factor.
 
 ## Build
 

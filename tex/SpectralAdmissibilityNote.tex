@@ -65,8 +65,8 @@
     The spectral admissibility sub-programme of the Cosmochrony corpus addresses a single
     central question: which spectral sectors of the Weil representation of
     $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ survive the Born--Infeld bounded-flux constraint?
-    The answer organises the entire O-series (papers O1--O33 and five precursor papers)
-    along a single chain:
+    The answer organises the entire O-series (papers O1 and O3--O33, five precursor papers, and
+    the Span-Growth and Critical Coverage companion notes) along a single chain:
     \[
       \text{bounded flux}
       \;\Longrightarrow\;
@@ -130,8 +130,8 @@
     conversion does not transfer to the substrate on which the capacities are measured.
     The value $\betastar \approx 0.126$ matches the phenomenological window
     $\betastar \in (0.09, 0.13)$ derived from the charged-lepton mass ratios $m_e : m_\mu : m_\tau$;
-    that agreement is a coincidence check, making this sub-programme the primary quantitative
-    framework and Standard Model observables.
+    that agreement is a coincidence check rather than a quantitative connection between the
+    projective framework and Standard Model observables.
 
     \medskip
     The sub-programme is also the hardest to navigate: it spans over thirty papers written
@@ -241,7 +241,7 @@ $\chi$ itself.
   \section{Constituent Papers}
     \label{sec:papers}
 
-    The sub-programme comprises five precursor papers, thirty-three O-series papers, and two
+    The sub-programme comprises five precursor papers, the O-series papers O1 and O3--O33, and two
     companion notes.
     Table~\ref{tab:papers} provides an overview organised by internal phase.
 
@@ -343,16 +343,22 @@ $\chi$ itself.
       invisible to rank, and the reciprocal prescription yields no $\betastar$ diagnostic from
       these data.
 
-      \textbf{O15}~\cite{Beau2026a19} establishes the block-level no-go: no reweighting of
-      individual block data recovers the admissible window $\delta \in [7.4, 10.6]$
-      (proved, Corollary~4.8 of that paper).
-      This result forces the introduction of the pair observable in O16.
+      \textbf{O15}~\cite{Beau2026a19} bounds the weighted aggregation observable: for its
+      dynamical weights, $\alpha_{\mathrm{dyn}} \leq \hat\delta_{\mathrm{exact}}$ whenever a
+      checkable covariance condition holds over the fitting window (Corollary~4.6 of that paper),
+      verified there at $q = 151$ and $q = 211$ and open at the other tested primes.
+      Since $\hat\delta_{\mathrm{exact}} < 5.0$ at every tested prime, that observable cannot
+      reach $[7.4, 10.6]$ where the condition is confirmed.
+      O15 states that the stronger claim, that no non-negative reweighting whatsoever could exceed
+      $\hat\delta_{\mathrm{exact}}$, is false, and that its restricted result does not rule out
+      every conceivable reweighting.
+      It is what motivates the pair observable in O16.
 
     \subsection{Pair observable and transfer chain (O16--O24)}
       \label{sec:pair}
 
-      The block-level no-go of O15 is structurally informative: it identifies the wrong
-      observable class, not a defect of the transfer mechanism.
+      The O15 bound is structurally informative: it points at the observable class rather than at
+      a defect of the transfer mechanism.
       The physically correct observable is the \emph{pair capacity}
       $\spair(n) = \sigma_c(n) \cdot \sigma_{q-c}(n)$ on conjugate pairs $\{c, q-c\}$.
 
@@ -379,8 +385,8 @@ $\chi$ itself.
 
       \textbf{O21}~\cite{Beau2026a25} defines the observable saturation rank $\nobs$ via the
       threshold condition $\Sigma_c(n_3) = 3$, states a conditional fibre-to-rate prescription
-      rather than a constructed transfer, and identifies the O15 obstruction as an
-      observable-class mismatch.
+      rather than a constructed transfer, and reads the O15 bound as an observable-class
+      mismatch.
 
       \textbf{O22}~\cite{Beau2026a26} proves that Born--Infeld projection locking forces
       $\nobs$ onto a BFS shell of $\Cay(G_q, S_q)$: shell-alignment is a theorem, not an
@@ -402,7 +408,7 @@ $\chi$ itself.
       O24 states explicitly that this does not establish the separate $\dimpair \to \betastar$
       capacity-to-rate step, for which no native Heisenberg growth carrier is defined.
 
-    \subsection{Numerical campaign and closure papers (O25--O32)}
+    \subsection{Numerical campaign and closure papers (O25--O33), with the companion notes}
       \label{sec:numerical}
 
       With the fibre-structure conditionality of $\cchi \to \dimpair$ closed by O24, the
@@ -520,10 +526,12 @@ $\chi$ itself.
           \midrule
           Precursors & SpAdm, SpCap, SpGram, 3Gen & $Q_8 \subset 2I$, binary maximality & P/S \\
           LPS phase & SpRel, O1--O8 & geometric obstruction; no cascade-exponent bound & P/O \\
-          Heisenberg transition & O9--O15 & Exact $\hat\delta_{\mathrm{exact}} \approx 4.5$; no-go & P \\
+          Heisenberg transition & O9--O15 & Exact $\hat\delta_{\mathrm{exact}} \approx 4.5$; conditional bound & P/C \\
           Pair + transfer & O16--O24 & $\cchi \to \dimpair$ fibre-conditionality closed & C \\
           Numerical + sector & O25--O30 & $\delta_{\mathrm{corr}}$ diagnostic; $r_{\mathrm{eff}} = 3$ & N/C \\
           SU(3) / colour & O31--O32 & O31 withdrawn; O32 measurements stand & O \\
+          Mass architecture & O33 & Exact doublets and protected sectors & S \\
+          Companion notes & Span-Growth, Critical Coverage & Transfer failure; exact depth law & P \\
           \bottomrule
         \end{tabular}
       \end{table}
@@ -535,8 +543,9 @@ $\chi$ itself.
 
     \begin{enumerate}
       \item \textbf{Weil representation.}
-      $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ and its Weil representation $V_\rho$, taken as a supplied
-      carrier.
+      $\Heis_3(\mathbb{Z}/q\mathbb{Z})$ and its Weil representation, taken as a supplied carrier.
+      The two-dimensional module $V_\rho$ of the later sections is a further supplied object,
+      selected by O26 minimality, and is not the Weil representation itself.
       HeisenbergStructure~\cite{Beau2026HeisenbergStructure} disproves their selection from the
       axioms A1--A4 by an explicit six-element countermodel, so the carrier is a supplied
       realisation and the mathematics of this sub-programme is conducted on it.
@@ -608,8 +617,11 @@ $\chi$ itself.
         \item \textit{Gram rigidity} (SpectralGramRigidity~\cite{Beau2026a3}): the geometry of
         neutral generating sets on $\SU(2)$ is fully encoded in pairwise character values.
 
-        \item \textit{Block-level no-go} (O15~\cite{Beau2026a19}): no reweighting of individual
-        block data recovers $\delta \in [7.4, 10.6]$; the pair observable is necessary.
+        \item \textit{Aggregation bound} (O15~\cite{Beau2026a19}): for its dynamical weights and
+        under a checkable covariance condition, $\alpha_{\mathrm{dyn}} \leq
+        \hat\delta_{\mathrm{exact}}$, so that observable cannot reach $[7.4, 10.6]$ where the
+        condition holds.
+        The universal reweighting no-go is not established.
 
         \item \textit{Parity covariance} (O18~\cite{Beau2026a22}): BI action evenness and
         the $(-1)^{k}$ covariance of the response family are proved; fixed-probe

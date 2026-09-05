@@ -240,9 +240,9 @@ $\chi$ itself.
       \item The \emph{admissibility thread} $Q_8 \subset 2I \subset \SU(2)$ is an output of
       the sub-programme, not an input.
       $Q_8$ is the minimal non-abelian finite subgroup of $\SU(2)$ compatible with bounded-flux
-      admissibility; $2I$ maximises the capacity functional at the verified valences
-      $d \in \{6, 12, 24\}$, its maximality for general $d$ remaining a conjecture; the LPS family
-      provides the Ramanujan approximation to $\SU(2)$ in the large-$q$ limit.
+      admissibility; $2I$ dominates its competitors at valence $d = 24$, its maximality among all
+      finite $\SU(2)$ subgroups remaining a conjecture; the LPS family provides the Ramanujan
+      approximation to $\SU(2)$ in the large-$q$ limit.
     \end{enumerate}
 
   \section{Constituent Papers}
@@ -259,7 +259,7 @@ $\chi$ itself.
       of finite $\SU(2)$ subgroups.
 
       \textbf{SpectralAdmissibility}~\cite{Beau2026a1} carries out the spectral admissibility
-      programme on the chain $Q_8 \subset 2I \subset \mathrm{PSL}(2,\mathbb{F}_q)$.
+      programme on the chain $Q_8 \subset 2I \subset \SU(2)$.
       It derives the admissibility hierarchy $A^{\max}_n = \cchi/\sqrt{\lambda_n}$ in the
       linearised regime and shows the non-linear DBI correction preserves it.
       For the SU(3) chain $\Delta(27) \subset \Sigma(168)$, it establishes the co-admissibility
@@ -269,8 +269,9 @@ $\chi$ itself.
       $\mathcal{C}_\alpha(G, S)$ and states the binary-polyhedral maximality \emph{conjecture}:
       that $2I$ uniquely maximises $\mathcal{C}_\alpha(G, S)$ for all $\alpha > 0$ among finite
       $\SU(2)$ subgroups with neutral generating sets.
-      For the valences $d \in \{6, 12, 24\}$ the argument closes by a finite algebraic
-      computation on classical character tables.
+      At the valences $d \in \{6, 12, 24\}$ it proves binary cover dominance by a finite algebraic
+      computation on classical character tables, the dominant group being the binary polyhedral
+      group of the valence: $Q_8$ at $d = 6$, $2O$ at $d = 12$, $2I$ at $d = 24$.
       The general statement remains a conjecture there: it would follow from a target theorem
       whose missing ingredient is a universal classification of the groups admitting a neutral
       generating set of a given size.
@@ -482,8 +483,8 @@ $\chi$ itself.
       \textbf{O26}~\cite{Beau2026a30} establishes the quadratic completion of admissible
       spectral pairs via binary-icosahedral representation, and formulates a hierarchy of
       identifications: growth equivalence at Level~I, quotient identification at Level~II, and the
-      conditional canonical identification of the spin-$\tfrac{1}{2}$ sector at Level~III, whose
-      falsifiability criterion is its Test~4.
+      conditional canonical identification of the spin-$\tfrac{1}{2}$ sector at Level~III, for
+      which its Test~4 states a falsifiability criterion.
       The doublet dimension it selects is a minimality choice, not a measurement.
 
       \textbf{O27}~\cite{Beau2026a31} shows that every admissible morphism factors uniquely
@@ -554,8 +555,10 @@ $\chi$ itself.
       Against the noise floor $\mathtt{ctrl\_ref} = 1.657 \times 10^{-3}$ and the criterion
       $R \leq 3$, the normalised ratios are $R = 2.1$ at $q = 61$, $0.4$ at $q = 151$, $1.0$ at
       $q = 211$ and $0.7$ at $q = 307$: the test passes at all four primes.
-      One triplet at $q = 61$ gives a short profile that O32 records as a pipeline artefact and
-      states does not affect the ratio, which is computed from all four.
+      At $q = 61$ only one of the four triplets yields a valid $\delta_{\mathrm{tri}}$ estimate,
+      the other three returning NaN from short sigma profiles; O32 records this as a known pipeline
+      artefact at that prime and states that it does not affect the variance ratio, which is
+      computed from all four triplets.
 
       \textbf{O33}~\cite{Beau2026a37} gives a finite spectral architecture for mass-square
       splitting and mixing: exact doublets and protected sectors from Weil admissibility, proved.
@@ -590,7 +593,7 @@ $\chi$ itself.
           \toprule
           Phase & Papers & Central output & Status \\
           \midrule
-          Precursors & SpAdm, SpCap, SpGram, 3Gen & $Q_8 \subset 2I$; binary maximality for
+          Precursors & SpAdm, SpCap, SpGram, 3Gen & $Q_8 \subset 2I$; binary cover dominance at
             $d \in \{6, 12, 24\}$ & P/S \\
           LPS phase & SpRel, O1--O8 & Geometric obstruction; no cascade-exponent bound & P/O \\
           Heisenberg transition & O9--O15 & Crossover slope $\approx 4.5$, unfolded exponent
@@ -665,7 +668,7 @@ $\chi$ itself.
         \midrule
         $\dimpair$; the reciprocal $\betastar \approx 0.126$ is a coincidence check
           & SMchargemass, lepton hierarchy & N \\
-        Admissibility thread $Q_8 \subset 2I \subset \SU(2)$, maximality verified at
+        Admissibility thread $Q_8 \subset 2I \subset \SU(2)$; binary cover dominance verified at
           $d \in \{6, 12, 24\}$ & Q1--Q3 (quantum sector) & P/C \\
         Spin-$\tfrac{1}{2}$ sector $V_\rho \cong \mathbb{C}^2$ (supplied, not derived) & Q7--Q11 (geometry) & C \\
         $\Sigma_c(n_3) = 3$ and $\Im\mathbb{H} \cong \su(2)$ (supplied carrier) & Q7 (spatial identification) & C \\
@@ -686,10 +689,11 @@ $\chi$ itself.
       The following results are established as theorems within their stated assumptions.
 
       \begin{enumerate}
-        \item \textit{Binary-polyhedral maximality at the verified valences}
-        (SpectralCapacity~\cite{Beau2026a2}): for $d \in \{6, 12, 24\}$, $2I$ maximises
-        $\mathcal{C}_\alpha(G, S)$ for all $\alpha > 0$, by a finite algebraic computation.
-        The statement for general $d$ remains a conjecture there.
+        \item \textit{Binary cover dominance at the verified valences}
+        (SpectralCapacity~\cite{Beau2026a2}): for $d \in \{6, 12, 24\}$ the binary polyhedral
+        group of that valence dominates its competitors --- $Q_8$ at $d = 6$, $2O$ at $d = 12$ and
+        $2I$ at $d = 24$ --- by a finite algebraic computation.
+        The maximality of $2I$ among all finite $\SU(2)$ subgroups remains a conjecture there.
 
         \item \textit{Gram rigidity} (SpectralGramRigidity~\cite{Beau2026a3}): the geometry of
         neutral generating sets on $\SU(2)$ is fully encoded in pairwise character values.

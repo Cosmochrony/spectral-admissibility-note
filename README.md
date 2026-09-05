@@ -34,30 +34,33 @@ A^{\max}_n = c_{\mathrm{BI}}/\sqrt{\lambda_n}
 \;\Longrightarrow\;
 \sigma^{\mathrm{can}}_{\mathrm{pair}}(n)
 \;\Longrightarrow\;
-\delta_{\mathrm{pair}}
-\;\Longrightarrow\;
-\beta^* \approx 0.126$.
+\delta_{\mathrm{pair}}$.
 
 i.e. **bounded flux** $\Rightarrow$ **admissibility envelope** $\Rightarrow$
-**Weil-sector capacity** $\Rightarrow$ **capacity exponent** $\Rightarrow$
-**cascade exponent**.
+**Weil-sector capacity** $\Rightarrow$ **capacity exponent**.
 
-The transfer segment is *unconditional* with respect to the fibre structure of
-$\Pi$ (closed in **O24**): no free parameter is adjusted to produce $\beta^*$.
-The group-theoretic extensions are not: the $\mathfrak{su}(2)$ identification is
-conditional on a supplied carrier, and the $SU(3)$ extension is withdrawn.
-The value $\beta^* \approx 0.126$ matches the phenomenological window
-$\beta^* \in (0.09, 0.13)$ derived from the charged-lepton mass ratios
-$m_e : m_\mu : m_\tau$, making the sub-programme the primary quantitative
-connection between the projective framework and Standard Model observables
-via the structural relation $\beta^* \approx 1/(\delta_{\mathrm{pair}} + \tfrac{1}{2})$.
+On the segment $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}}$, **O24** closes the
+fibre-structure conditionality under a supplied carrier, and no free parameter is
+adjusted. The further step to the cascade exponent is **not** part of the chain:
+the reciprocal prescription
+$\beta^* \approx 1/(\delta_{\mathrm{pair}} + \tfrac{1}{2})$ has no carrier on the
+Heisenberg measurement substrate, and the **Span-Growth Note** proves that the
+expander-derived conversion does not transfer there. The agreement of
+$\beta^* \approx 0.126$ with the phenomenological window
+$\beta^* \in (0.09, 0.13)$ from the charged-lepton mass ratios
+$m_e : m_\mu : m_\tau$ is a coincidence check, not a derivation.
+The group-theoretic extensions are conditional or withdrawn: the
+$\mathfrak{su}(2)$ identification rests on a supplied carrier, and the $SU(3)$
+extension is withdrawn.
 
 ## Position in the Programme
 
 The Cosmochrony corpus is organised into three branches:
 
-- **Branch I** — axiomatic primitive: four axioms (A1–A4) derive
-  $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ and its Weil representation as theorems.
+- **Branch I** — axiomatic primitive: admissible non-injective transitions.
+  The selection of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ and its Weil
+  representation from A1–A4 is **not** a theorem: HeisenbergStructure disproves
+  that implication by a six-element countermodel, so the carrier is supplied.
 - **Branch II** — the spectral admissibility sub-programme (this note): the
   **computational engine** of the corpus.
 - **Branch III** — derives quantum mechanics, spacetime geometry, gauge
@@ -68,21 +71,23 @@ Branch III depends on:
 
 1. the admissible sector as the spin-$\tfrac{1}{2}$ representation of $SU(2)$,
    embedded via the admissibility thread $Q_8 \subset 2I \subset SU(2)$;
-2. the value $\beta^* \approx 0.126$ and its interpretation as the scaling
-   exponent of Hilbert–Schmidt norm growth in the minimal admissible
-   non-abelian sector $\mathfrak{su}(2)$.
+2. the capacity exponent $\delta_{\mathrm{pair}}$ and its interpretation as the
+   scaling exponent of Hilbert–Schmidt norm growth in the minimal admissible
+   non-abelian sector $\mathfrak{su}(2)$. The reciprocal $\beta^* \approx 0.126$
+   is a coincidence check, not an output of the chain.
 
 ## Constituent Papers
 
-The sub-programme comprises **five precursor papers** and **thirty-two
-O-series papers**, organised into internal phases:
+The sub-programme comprises **five precursor papers**, **thirty-three O-series
+papers** and **two companion notes** (Span-Growth, Critical Coverage), organised
+into internal phases:
 
 | Phase | Papers | Central output | Status |
 |---|---|---|---|
 | Precursors | SpAdm, SpCap, SpGram, 3Gen | $Q_8 \subset 2I$, binary maximality | P/S |
-| LPS phase | SpRel, O1–O8 | $\beta \leq 1$; geometric obstruction | P |
+| LPS phase | SpRel, O1–O8 | geometric obstruction; no cascade-exponent bound | P/O |
 | Heisenberg transition | O9–O15 | exact $\hat\delta_{\mathrm{exact}} \approx 4.5$; no-go | P |
-| Pair + transfer | O16–O24 | $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}} \to \beta^*$, unconditional | P |
+| Pair + transfer | O16–O24 | $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}}$ fibre-conditionality closed | C |
 | Numerical + sector | O25–O30 | $\delta_{\mathrm{corr}}$ diagnostic; $r_{\mathrm{eff}} = 3$ | N/C |
 | SU(3) / colour | O31–O32 | O31 withdrawn; O32 measurements stand | O |
 

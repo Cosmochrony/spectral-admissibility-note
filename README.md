@@ -84,12 +84,14 @@ organised into internal phases:
 
 | Phase | Papers | Central output | Status |
 |---|---|---|---|
-| Precursors | SpAdm, SpCap, SpGram, 3Gen | $Q_8 \subset 2I$, binary maximality | P/S |
+| Precursors | SpAdm, SpCap, SpGram, 3Gen | $Q_8 \subset 2I$; binary maximality for $d \in \{6,12,24\}$ | P/S |
 | LPS phase | SpRel, O1–O8 | geometric obstruction; no cascade-exponent bound | P/O |
 | Heisenberg transition | O9–O15 | exact $\hat\delta_{\mathrm{exact}} \approx 4.5$; conditional bound | P/C |
 | Pair + transfer | O16–O24 | $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}}$ fibre-conditionality closed | C |
-| Numerical + sector | O25–O30 | $\delta_{\mathrm{corr}}$ diagnostic; $r_{\mathrm{eff}} = 3$ | N/C |
+| Numerical + sector | O25–O30 | $\delta_{\mathrm{corr}}$ diagnostic; $r_{\mathrm{eff}} = 3$ finite-data | N/C |
 | SU(3) / colour | O31–O32 | O31 withdrawn; O32 measurements stand | O |
+| Mass architecture | O33 | finite spectral architecture for mass-square splitting | S |
+| Companion notes | Span-Growth, Critical Coverage | transfer failure; exact depth law | P |
 
 Status codes: **P** = proved, **S** = structural, **N** = numerical,
 **C** = conditional, **O** = open.
@@ -108,11 +110,11 @@ Three open deliverables define the current boundary of the sub-programme:
    The carrier is supplied by O23 and selected by O26 minimality; the vector lift
    of O26 Hypothesis 4.4 is open, and no measurement of the sub-programme
    identifies $V_\rho$.
-3. **Numerical campaign at $q = 401$.**
-   The campaign at $q \in \{29, 61, 101, 151, 211, 307\}$ is complete;
-   $q = 401$ is the sole remaining numerical task, constraining the convergence
-   rate of $n_1(q)/q$ and providing a fifth data point for the
-   $R_{\mathrm{var}}(q) \propto q^{-1}$ scaling prediction.
+3. **Numerical campaign at full breadth.**
+   The pair-level campaign runs at $q \in \{29, 61, 101, 151, 211\}$ at full
+   breadth and is extended in O25 to $q \in \{307, 401, 601\}$ at reduced
+   sampling, so the large-$q$ dispersion there is inflated by the reduced pair
+   count. What remains is breadth rather than reach.
 
 ## Status
 

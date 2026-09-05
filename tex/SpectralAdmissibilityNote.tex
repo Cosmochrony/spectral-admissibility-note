@@ -259,11 +259,14 @@ $\chi$ itself.
       of the fundamental and anti-fundamental representations via character theory.
 
       \textbf{SpectralCapacity}~\cite{Beau2026a2} introduces the capacity functional
-      $\mathcal{C}_\alpha(G, S)$ and proves the binary-polyhedral maximality conjecture:
-      $2I$ uniquely maximises $\mathcal{C}_\alpha(G, S)$ for all $\alpha > 0$ among finite
+      $\mathcal{C}_\alpha(G, S)$ and states the binary-polyhedral maximality \emph{conjecture}:
+      that $2I$ uniquely maximises $\mathcal{C}_\alpha(G, S)$ for all $\alpha > 0$ among finite
       $\SU(2)$ subgroups with neutral generating sets.
-      The proof is closed analytically for degrees $d \in \{6, 12, 24\}$ (Theorem~8.1 of that
-      paper).
+      For the valences $d \in \{6, 12, 24\}$ the argument closes by a finite algebraic
+      computation on classical character tables.
+      The general statement remains a conjecture there: it would follow from a target theorem
+      whose missing ingredient is a universal classification of the groups admitting a neutral
+      generating set of a given size.
 
       \textbf{SpectralGramRigidity}~\cite{Beau2026a3} shows that the geometry of neutral
       generating sets on $\SU(2)$ is fully encoded in pairwise character values
@@ -297,7 +300,10 @@ $\chi$ itself.
       $\mathrm{PSL}(2,\mathbb{F}_q)$ and finds that none of the constructions it examines yields a
       viable mechanism for $\betastar$.
 
-      \textbf{O6}~\cite{Beau2026a10} proves matrix-level confinement of the cascade exponent.
+      \textbf{O6}~\cite{Beau2026a10} confirms $q$-structural saturation at the $O(q^2)$
+      Steinberg level and characterises the obstruction to exponent extraction there: the
+      pre-saturation window is too short to extract a stable effective exponent, and a multi-step
+      path fingerprint is identified as the construction the next level would require.
 
       \textbf{O7}~\cite{Beau2026a11} reformulates the target as a capacity exponent
       $\delta \in [7.4, 10.6]$ on three-step path fingerprints (structural).
@@ -312,11 +318,12 @@ $\chi$ itself.
       The geometric obstruction of O8 forces a change of arena.
       The Cayley graph $\Cay(\Heis_3(\mathbb{Z}/q\mathbb{Z}), S_q)$ has polynomial ball growth
       $|B_n| \sim C n^4$ (Bass--Guivarc'h theorem, homogeneous dimension $D = 4$), restoring an
-      exploitable window of $\Theta(q)$ BFS steps.
+      exploitable window whose depth O9 bounds below by $\Omega(q^{1/2})$ BFS steps.
 
       \textbf{O9}~\cite{Beau2026a13} resolves the geometric obstruction by switching to
       Heisenberg graphs.
-      Polynomial growth is confirmed; the window depth scales as $\Theta(q)$.
+      Polynomial growth is confirmed, and its Window-Depth Theorem shows that a vertex window of
+      $O(q^2)$ spans $\Omega(q^{1/2})$ BFS steps; the diameter is $\Theta(q)$.
 
       \textbf{O10}~\cite{Beau2026a14} performs the first large-$q$ computation ($q = 101$,
       $|G_q| = 1{,}030{,}301$) and identifies an algorithmic obstruction: the dense TensorSketch
@@ -357,13 +364,20 @@ $\chi$ itself.
     \subsection{Pair observable and transfer chain (O16--O24)}
       \label{sec:pair}
 
-      The O15 bound is structurally informative: it points at the observable class rather than at
-      a defect of the transfer mechanism.
+      O15 also establishes the Heisenberg transfer no-go of its title: any future resolution
+      requires a new growth carrier or an explicitly stated cross-substrate hypothesis.
+      Its aggregation bound points, in addition, at the observable class.
       The physically correct observable is the \emph{pair capacity}
       $\spair(n) = \sigma_c(n) \cdot \sigma_{q-c}(n)$ on conjugate pairs $\{c, q-c\}$.
 
-      \textbf{O16}~\cite{Beau2026a20} identifies the observable mismatch.
-      The exponent doubling $\dimpair = 2\delta_c \approx 7.44$ resolves the gap (structural).
+      \textbf{O16}~\cite{Beau2026a20} examines whether conjugate blocks are the fibres of $\Pi$
+      and types the two premises that identification would need, neither derived here.
+      Under a further hypothesis, that the conjugate-pair ratio $r(c,q)$ is independent of the
+      shell index, the log-log slope of the pair product is exactly double that of $\sigma_c$.
+      On the exact block observable of the O12/O13 pipeline the proved conjugate-block identity
+      forces $r(c,q) \equiv 1$, so the pair product reduces definitionally to the single block
+      squared and there is no separate doubling phenomenon there.
+      O16 asserts no numerical value of the pair exponent.
 
       \textbf{O17}~\cite{Beau2026a21} proves the conjugation identity $\rho_{q-c} = \bar\rho_c$
       and the exact block-independence of the Gram--Schmidt count, within its own scalar toy
@@ -421,9 +435,13 @@ $\chi$ itself.
       $q \in \{29, 61, 101, 151, 211\}$.
       Results: $\bar\delta_{\mathrm{pair}} \in \{8.89, 9.98, 9.55, 9.13, 8.78\}$ with inter-pair
       standard deviation decreasing from 0.54 to 0.11.
+      The campaign is extended there to $q \in \{307, 401, 601\}$ at reduced sampling.
       After the finite-size adjustment $\eta \log q / \log n_1(q)$, the adjusted values
-      $\delta_{\mathrm{corr}}(q) \in [7.7, 9.0]$ fall within the target window $[7.4, 10.6]$ for
-      $q \in \{61, 101, 151, 211\}$.
+      $\delta_{\mathrm{corr}}(q) \in [7.7, 9.0]$ lie within the target window $[7.4, 10.6]$ for
+      $q \in \{61, 101, 151, 211\}$, and O25 reports the adjustment overcorrecting beyond that
+      range, to $6.53$ at $q = 601$.
+      O25's own reading assigns the window agreement to the \emph{raw} exponent, which descends
+      into $[7.4, 10.6]$ unaided and reaches $7.61$ at $q = 601$.
       O14~\cite{Beau2026a18} establishes that this term leaves a fixed-$q$ fitted slope invariant,
       so the adjustment is a declared diagnostic and not a correction of the fitted exponent.
 
@@ -520,17 +538,22 @@ $\chi$ itself.
         Status codes: P = proved; S = structural; N = numerical; C = conditional; O = open.}
         \label{tab:papers}
         \renewcommand{\arraystretch}{1.2}
-        \begin{tabular}{@{}lllll@{}}
+        \begin{tabular}{@{}>{\raggedright\arraybackslash}p{2.7cm}
+          >{\raggedright\arraybackslash}p{3.1cm}
+          >{\raggedright\arraybackslash}p{7.3cm}l@{}}
           \toprule
           Phase & Papers & Central output & Status \\
           \midrule
-          Precursors & SpAdm, SpCap, SpGram, 3Gen & $Q_8 \subset 2I$, binary maximality & P/S \\
-          LPS phase & SpRel, O1--O8 & geometric obstruction; no cascade-exponent bound & P/O \\
-          Heisenberg transition & O9--O15 & Exact $\hat\delta_{\mathrm{exact}} \approx 4.5$; conditional bound & P/C \\
+          Precursors & SpAdm, SpCap, SpGram, 3Gen & $Q_8 \subset 2I$; binary maximality for
+            $d \in \{6, 12, 24\}$ & P/S \\
+          LPS phase & SpRel, O1--O8 & Geometric obstruction; no cascade-exponent bound & P/O \\
+          Heisenberg transition & O9--O15 & Exact $\hat\delta_{\mathrm{exact}} \approx 4.5$;
+            conditional aggregation bound & P/C \\
           Pair + transfer & O16--O24 & $\cchi \to \dimpair$ fibre-conditionality closed & C \\
-          Numerical + sector & O25--O30 & $\delta_{\mathrm{corr}}$ diagnostic; $r_{\mathrm{eff}} = 3$ & N/C \\
+          Numerical + sector & O25--O30 & $\delta_{\mathrm{corr}}$ diagnostic;
+            $r_{\mathrm{eff}} = 3$ finite-data & N/C \\
           SU(3) / colour & O31--O32 & O31 withdrawn; O32 measurements stand & O \\
-          Mass architecture & O33 & Exact doublets and protected sectors & S \\
+          Mass architecture & O33 & Finite spectral architecture for mass-square splitting & S \\
           Companion notes & Span-Growth, Critical Coverage & Transfer failure; exact depth law & P \\
           \bottomrule
         \end{tabular}
@@ -583,7 +606,8 @@ $\chi$ itself.
         Status codes as in Table~\ref{tab:papers}.}
       \label{tab:outputs}
       \renewcommand{\arraystretch}{1.3}
-      \begin{tabular}{@{}p{5.5cm}p{4.5cm}l@{}}
+      \begin{tabular}{@{}>{\raggedright\arraybackslash}p{5.5cm}
+        >{\raggedright\arraybackslash}p{4.5cm}l@{}}
         \toprule
         Output & Consumer & Status \\
         \midrule
@@ -608,11 +632,10 @@ $\chi$ itself.
       The following results are established as theorems within their stated assumptions.
 
       \begin{enumerate}
-        \item \textit{Binary-polyhedral maximality} (SpectralCapacity~\cite{Beau2026a2}): $2I$
-        uniquely maximises $\mathcal{C}_\alpha(G, S)$ for all $\alpha > 0$ among finite $\SU(2)$
-        subgroups with neutral generating sets.
-        Closed analytically for $d \in \{6, 12, 24\}$ and by Proposition~8.11 for the dicyclic
-        exclusion.
+        \item \textit{Binary-polyhedral maximality at the verified valences}
+        (SpectralCapacity~\cite{Beau2026a2}): for $d \in \{6, 12, 24\}$, $2I$ maximises
+        $\mathcal{C}_\alpha(G, S)$ for all $\alpha > 0$, by a finite algebraic computation.
+        The statement for general $d$ remains a conjecture there.
 
         \item \textit{Gram rigidity} (SpectralGramRigidity~\cite{Beau2026a3}): the geometry of
         neutral generating sets on $\SU(2)$ is fully encoded in pairwise character values.
@@ -760,13 +783,16 @@ $\chi$ itself.
     The carrier is supplied by O23 and selected by O26 minimality; the vector lift of O26
     Hypothesis~4.4 is open, and no measurement of the sub-programme identifies $V_\rho$.
 
-    \textbf{Open deliverable 3: Numerical campaign at $q = 401$.}
-    The campaign at $q \in \{29, 61, 101, 151, 211, 307\}$ is complete.
+    \textbf{Open deliverable 3: the numerical campaign at full breadth.}
+    The pair-level campaign runs at $q \in \{29, 61, 101, 151, 211\}$ at full breadth and is
+    extended in O25 to $q \in \{307, 401, 601\}$ at reduced sampling ($M = 16$ at $307$, $M = 8$
+    and twelve pairs at $401$ and $601$), so the large-$q$ dispersion there is inflated by the
+    reduced pair count.
     At $q = 307$ the O32 variance test passes on all 4/4 triplets
     ($R_{\mathrm{var}} = 1.17 \times 10^{-3}$,~\cite{Beau2026a36}).
-    The extension to $q = 401$ is the sole remaining numerical task:
-    it constrains the rate of convergence of $n_1(q)/q$ and provides the fifth data point
-    for the $R_{\mathrm{var}}(q) \propto q^{-1}$ scaling prediction.
+    What remains is breadth rather than reach: a full-breadth run beyond $q = 211$ would
+    constrain the convergence of $n_1(q)/q$ and supply an uninflated data point for the
+    $R_{\mathrm{var}}(q) \propto q^{-1}$ scaling.
 
     \medskip
     \noindent All other open problems of earlier papers (e.g., the rigorous continuum limit of

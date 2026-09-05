@@ -60,9 +60,10 @@ extension is withdrawn.
 The Cosmochrony corpus is organised into three branches:
 
 - **Branch I** — axiomatic primitive: admissible non-injective transitions.
-  The selection of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ and its Weil
-  representation from A1–A4 is **not** a theorem: HeisenbergStructure disproves
-  that implication by a six-element countermodel, so the carrier is supplied.
+  The selection of $\mathrm{Heis}_3(\mathbb{Z}/q\mathbb{Z})$ from A1–A4 is
+  **not** a theorem: HeisenbergStructure disproves that implication by a
+  six-element countermodel, and the Weil action is a further supplied object, so
+  this sub-programme's mathematics is conducted on a supplied carrier.
 - **Branch II** — the spectral admissibility sub-programme (this note): the
   **computational engine** of the corpus.
 - **Branch III** — develops the quantum, spacetime-geometric, gauge, and
@@ -90,7 +91,7 @@ organised into internal phases:
 |---|---|---|---|
 | SU(2) precursors | SpAdm, SpCap, SpGram, 3Gen | $Q_8 \subset 2I$; binary cover dominance, $d=6,12,24$ | P/S |
 | LPS phase | SpRel, O1–O8 | geometric obstruction; no cascade-exponent bound | P/O |
-| Heisenberg transition | O9–O15 | crossover slope $\approx 4.5$, unfolded exponent $3$; cond. bound | P/C |
+| Heisenberg transition | O9–O15 | crossover $\approx 4.5$, unfolded $\delta_{\mathrm{exact}}=3$; cond. bound | P/C |
 | Pair + transfer boundary | O16–O24 | $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}}$ fibre-conditionality closed | C |
 | Numerical + sector | O25–O30 | $\delta_{\mathrm{corr}}$ diagnostic; $r_{\mathrm{eff}} = 3$ finite-data | N/C |
 | SU(3) / colour | O31–O32 | O31 withdrawn; O32 measurements stand | N/O |

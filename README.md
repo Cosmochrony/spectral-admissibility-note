@@ -69,8 +69,9 @@ The Cosmochrony corpus is organised into three branches:
 Branch II takes the algebraic output of Branch I and produces the two inputs
 Branch III depends on:
 
-1. the admissible sector as the spin-$\tfrac{1}{2}$ representation of $SU(2)$,
-   embedded via the admissibility thread $Q_8 \subset 2I \subset SU(2)$;
+1. the admissibility thread $Q_8 \subset 2I \subset SU(2)$, within which the
+   spin-$\tfrac{1}{2}$ sector is selected by O26 minimality on a carrier supplied
+   by O23 rather than identified here;
 2. the capacity exponent $\delta_{\mathrm{pair}}$ and its interpretation as the
    scaling exponent of Hilbert–Schmidt norm growth in the minimal admissible
    non-abelian sector $\mathfrak{su}(2)$. The reciprocal $\beta^* \approx 0.126$
@@ -120,7 +121,8 @@ Three open deliverables define the current boundary of the sub-programme:
 
 The $SU(2)$ sector is **carried by a conditional chain, not closed**: its carrier
 is supplied by O23 and O26 Hypothesis 4.4 is open. The numerical campaign is
-complete for $q \in \{29, 61, 101, 151, 211, 307\}$.
+complete at full breadth for $q \in \{29, 61, 101, 151, 211\}$ and extended at
+reduced sampling to $q \in \{307, 401, 601\}$.
 The extension to $SU(3)$ is **open**: O31 version 2.0 withdraws the colour-group
 derivation and every derivation of a gauge factor.
 

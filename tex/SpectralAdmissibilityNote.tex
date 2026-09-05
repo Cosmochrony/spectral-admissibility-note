@@ -160,8 +160,9 @@
     It takes the algebraic output of Branch~I (the Weil representation and its decomposition
     into irreducible blocks) and produces the two inputs that Branch~III depends on:
     \begin{enumerate}
-      \item the identification of the admissible sector as the spin-$\tfrac{1}{2}$ representation
-      of $\SU(2)$ embedded via the admissibility thread $Q_8 \subset 2I \subset \SU(2)$;
+      \item the admissibility thread $Q_8 \subset 2I \subset \SU(2)$, within which the
+      spin-$\tfrac{1}{2}$ sector is selected by O26 minimality on a carrier supplied by O23 rather
+      than identified here, that identification remaining an open deliverable;
       \item the capacity exponent $\dimpair$ and its representation-theoretic interpretation as
       the scaling exponent of Hilbert--Schmidt norm growth along trajectories in the minimal
       admissible non-abelian sector $\su(2)$.
@@ -225,8 +226,10 @@ $\chi$ itself.
       proves Born--Infeld parity as a covariance of the response family and states the fibre identification
       as an open classification problem), is the structural origin of the pair observable
       $\spair(n) = \sigma_c(n) \cdot \sigma_{q-c}(n)$.
-      The factor-of-two relation $\dimpair = 2\delta_c$ is a consequence of this fibre pairing,
-      conditional on the same hypothesis.
+      The factor-of-two relation $\dimpair = 2\delta_c$ follows from a further hypothesis of
+      O16~\cite{Beau2026a20}, that the conjugate-pair ratio is independent of the shell index.
+      On the exact block observable that ratio is identically one, so the pair product reduces to
+      the single block squared and no separate doubling arises there.
 
       \item The \emph{observable hierarchy}: the pair capacity $\sigma_c(n)$ (normalised BFS
       span in the Weil block $V_c$) is strictly finer than the Markov spectrum of the Weil
@@ -541,8 +544,8 @@ $\chi$ itself.
       on the standard graph.
       Its measurements stand as measurements; they do not support the withdrawn colour-group
       derivation.
-      Results for $q \in \{61, 151, 211\}$ (test, $q \equiv 1 \pmod 3$) and
-      $q \in \{29, 101\}$ (control, $q \equiv 2 \pmod 3$).
+      Results for the test primes $q \in \{61, 151, 211, 307\}$ ($q \equiv 1 \pmod 3$) and the
+      controls $q \in \{29, 101\}$ ($q \equiv 2 \pmod 3$).
       Against the noise floor $\mathtt{ctrl\_ref} = 1.657 \times 10^{-3}$ and the criterion
       $R \leq 3$, the normalised ratios are $R = 2.1$ at $q = 61$, $0.4$ at $q = 151$, $1.0$ at
       $q = 211$ and $0.7$ at $q = 307$: the test passes at all four.
@@ -569,7 +572,8 @@ $\chi$ itself.
 
       \begin{table}[ht]
         \centering
-        \caption{Summary of the O-series by internal phase.
+        \caption{Summary of the corpus by phase; the last two rows collect the constituents that
+        section~\ref{sec:numerical} presents inside its own subsection.
         Status codes: P = proved; S = structural; N = numerical; C = conditional; O = open.}
         \label{tab:papers}
         \renewcommand{\arraystretch}{1.2}
@@ -842,8 +846,8 @@ $\chi$ itself.
     At $q = 307$ the O32 test gives window variance $1.17 \times 10^{-3}$ and normalised ratio
     $R = 0.7$, inside its criterion~\cite{Beau2026a36}.
     What remains is breadth rather than reach: a full-breadth run beyond $q = 211$ would
-    constrain the convergence of $n_1(q)/q$ and supply an uninflated data point for the
-    $R_{\mathrm{var}}(q) \propto q^{-1}$ scaling.
+    supply uninflated data points, both for the approach of $n_1(q)/q$ to the limit the Critical
+    Coverage Note establishes and for the $R_{\mathrm{var}}(q) \propto q^{-1}$ scaling.
 
     \medskip
     \noindent All other open problems of earlier papers (e.g., the rigorous continuum limit of
@@ -862,7 +866,8 @@ $\chi$ itself.
 
     The SU(2) sector is carried by a conditional chain rather than closed: its carrier is supplied
     by O23 and the vector lift of O26 Hypothesis~4.4 is open.
-    The numerical campaign is complete for $q \in \{29, 61, 101, 151, 211, 307\}$.
+    The numerical campaign is complete at full breadth for $q \in \{29, 61, 101, 151, 211\}$ and
+    extended at reduced sampling to $q \in \{307, 401, 601\}$.
     The extension to SU(3) is open: O31~\cite{Beau2026a35} withdraws the colour-group derivation
     and every derivation of a gauge factor, so neither the colour factor nor the Standard Model
     gauge group is established here; the O32 measurements~\cite{Beau2026a36} stand on their own

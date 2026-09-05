@@ -272,11 +272,17 @@ $\chi$ itself.
       generating sets on $\SU(2)$ is fully encoded in pairwise character values
       $G_{st} = -\tfrac{1}{2}\chi_\rho(st)$.
 
-      \textbf{ThreeGenerations}~\cite{Beau2026a4} derives the three-generation structure from
-      the ADE stratigraphic levels of binary Cayley graphs (structural).
+      \textbf{ThreeGenerations}~\cite{Beau2026a4} shows that a scalar power-law threshold gives a
+      featureless stratigraphic profile, while a threshold acting representation by representation
+      on ADE-type binary Cayley graphs yields exactly three non-zero spectral classes for four
+      pairs $(G, S)$ in $\{2T, 2O, 2I\}$, read there as the generation count (structural).
 
-      \textbf{SpectralRelaxation}~\cite{Beau2026a5} establishes $\Lambda_{\mathrm{proj}} \asymp
-  \lambda_2$ for LPS expander families, providing the entry point for the O-series dynamics.
+      \textbf{SpectralRelaxation}~\cite{Beau2026a5} derives
+      $\Lambda_{\mathrm{proj}} \asymp h(G)^2$ from the isoperimetric capacity of the cascade
+      graph, which gives $\Lambda_{\mathrm{proj}} \asymp \lambda_2$ for expander families
+      satisfying spectral-isoperimetric saturation.
+      At fixed LPS prime the spectral gap converges, so $\Lambda_{\mathrm{proj}}$ becomes
+      asymptotically static and stabilisation is governed by spectral counting instead.
 
     \subsection{O-series core: LPS phase (O1--O8)}
       \label{sec:lps}
@@ -285,12 +291,14 @@ $\chi$ itself.
       exponential shell growth $|B_n| \sim p^n$ and therefore represent the most natural
       large-group setting for bounded-flux dynamics.
 
-      \textbf{O1}~\cite{Beau2026a6} shows that LPS saturation is a fixed-valence artefact;
-      growing valence restores the pre-saturation window.
+      \textbf{O1}~\cite{Beau2026a6} shows that this saturation is an artefact of holding the LPS
+      parameter fixed: letting the valence grow contracts the Kesten--McKay support towards its
+      midpoint, restores a non-trivial dynamical regime for $\Lambda_{\mathrm{proj}}$, and
+      corrects the fixed-valence ordering inversion.
 
-      \textbf{O3}~\cite{Beau2026a7} derives the phenomenological target window
-      $\betastar \in (0.09, 0.13)$ from the charged-lepton mass ratios $m_e : m_\mu : m_\tau$
-      (structural).
+      \textbf{O3}~\cite{Beau2026a7} obtains the hierarchical amplification mechanism from a
+      growing relational valence, and fixes the compatibility window $\betastar \in (0.09, 0.13)$
+      by matching the charged-lepton sector, anchored on $m_e/m_\tau$ (structural).
 
       \textbf{O4}~\cite{Beau2026a8} examines whether a structural upper bound $\beta \leq 1$
       follows from the BI flux constraint together with the Cheeger isoperimetric inequality, and
@@ -305,12 +313,15 @@ $\chi$ itself.
       pre-saturation window is too short to extract a stable effective exponent, and a multi-step
       path fingerprint is identified as the construction the next level would require.
 
-      \textbf{O7}~\cite{Beau2026a11} reformulates the target as a capacity exponent
-      $\delta \in [7.4, 10.6]$ on three-step path fingerprints (structural).
+      \textbf{O7}~\cite{Beau2026a11} reformulates the target as a decay condition on the
+      discrete projective capacity: find a fingerprint scale and depth for which
+      $\bar\Sigma_n \sim p(n)^{-\delta}$ with $\delta \in [7.4, 10.6]$ in a measurable
+      pre-saturation window (structural).
 
-      \textbf{O8}~\cite{Beau2026a12} establishes the geometric obstruction closing the LPS
-      phase: exponential shell growth compresses the entire pre-saturation window into
-      $O(\log q)$ BFS steps, preventing stable slope estimation.
+      \textbf{O8}~\cite{Beau2026a12} constructs the three-step path fingerprint at ambient
+      dimension $O(q^3)$ and tests that condition on LPS graphs, where exponential shell growth
+      compresses the pre-saturation window into $O(\log q)$ BFS steps and prevents stable slope
+      estimation: the geometric obstruction that closes the LPS phase.
 
     \subsection{O-series core: Heisenberg transition (O9--O15)}
       \label{sec:heisenberg}
@@ -335,12 +346,21 @@ $\chi$ itself.
       $\hat\delta_{\mathrm{cap}} \approx 3.4$ is extracted at $q = 307$.
 
       \textbf{O12}~\cite{Beau2026a16} implements the exact Weil projection, closes the
-      representation-level ambiguity left by O11, and extracts $\hat\delta_{\mathrm{exact}}
-  \approx 4.3$--$4.8$ for $q \in \{29, 53, 61\}$ ($R^2 > 0.98$).
+      representation-level ambiguity left by O11, and fits
+      $\hat\delta_{\mathrm{exact}} \in \{4.37, 4.28, 4.80\}$ at $q \in \{29, 53, 61\}$
+      ($R^2 > 0.98$).
+      It also derives the observable in closed form and shows it exactly independent of the
+      translational and central coordinates by an algebraic identity, so those fitted slopes are a
+      finite-$q$ crossover statistic and the intrinsic unfolded exponent is
+      $\delta_{\mathrm{exact}} = 3$.
 
-      \textbf{O13}~\cite{Beau2026a17} confirms asymptotic stability of the exact Weil-block
-      capacity over the extended prime range and establishes monotone decrease of
-      $\hat\delta_{\mathrm{exact}}(q)$, definitively refuting the finite-size hypothesis.
+      \textbf{O13}~\cite{Beau2026a17} extends the computation to $q \in \{101, 151, 211\}$ and
+      rules out the finite-size hypothesis in its strong form: the exact-block exponent does not
+      drift toward the phenomenological range at larger primes, the measurement becoming strictly
+      more reliable there.
+      It requalifies the $\delta$--$\betastar$ tension rather than resolving it: which quantity is
+      the physical one --- the finite-$q$ crossover slope, the unfolded exponent
+      $\delta_{\mathrm{exact}} = 3$, or the saturation-scale scaling function --- is left open.
 
       \textbf{O14}~\cite{Beau2026a18} establishes why exact Heisenberg capacity does not
       determine the phenomenological cascade rate.
@@ -379,9 +399,12 @@ $\chi$ itself.
       squared and there is no separate doubling phenomenon there.
       O16 asserts no numerical value of the pair exponent.
 
-      \textbf{O17}~\cite{Beau2026a21} proves the conjugation identity $\rho_{q-c} = \bar\rho_c$
-      and the exact block-independence of the Gram--Schmidt count, within its own scalar toy
-      model; the reading of the conjugate pair as a fibre remains a hypothesis.
+      \textbf{O17}~\cite{Beau2026a21} proves, within a scalar Weil-representation toy model, that
+      the raw Gram--Schmidt redundancy count is exactly independent of the central character and of
+      both initial-condition parameters --- identical for any two blocks, not only for conjugate
+      ones.
+      The proof is combinatorial and uses no conjugation identity; the reading of the conjugate
+      pair as a fibre remains a hypothesis.
 
       \textbf{O18}~\cite{Beau2026a22} delimits what Born--Infeld structure contributes to that
       hypothesis: the action is even and parity acts covariantly on the response family
@@ -394,8 +417,8 @@ $\chi$ itself.
       $r(c, q) \in \{1, 2, 3, 4\}$ does not affect $\dimpair$; the observable is
       pipeline-independent.
 
-      \textbf{O20}~\cite{Beau2026a24} establishes a dynamical selection criterion for admissible
-      modes via projective persistence (structural).
+      \textbf{O20}~\cite{Beau2026a24} proposes a projective persistence criterion for selecting
+      the physical sub-spectrum, the selecting mechanism being unidentified there (structural).
 
       \textbf{O21}~\cite{Beau2026a25} defines the observable saturation rank $\nobs$ via the
       threshold condition $\Sigma_c(n_3) = 3$, states a conditional fibre-to-rate prescription
@@ -547,8 +570,8 @@ $\chi$ itself.
           Precursors & SpAdm, SpCap, SpGram, 3Gen & $Q_8 \subset 2I$; binary maximality for
             $d \in \{6, 12, 24\}$ & P/S \\
           LPS phase & SpRel, O1--O8 & Geometric obstruction; no cascade-exponent bound & P/O \\
-          Heisenberg transition & O9--O15 & Exact $\hat\delta_{\mathrm{exact}} \approx 4.5$;
-            conditional aggregation bound & P/C \\
+          Heisenberg transition & O9--O15 & Crossover slope $\approx 4.5$, unfolded exponent
+            $\delta_{\mathrm{exact}} = 3$; conditional bound & P/C \\
           Pair + transfer & O16--O24 & $\cchi \to \dimpair$ fibre-conditionality closed & C \\
           Numerical + sector & O25--O30 & $\delta_{\mathrm{corr}}$ diagnostic;
             $r_{\mathrm{eff}} = 3$ finite-data & N/C \\

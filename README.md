@@ -86,7 +86,7 @@ organised into internal phases:
 |---|---|---|---|
 | Precursors | SpAdm, SpCap, SpGram, 3Gen | $Q_8 \subset 2I$; binary maximality for $d \in \{6,12,24\}$ | P/S |
 | LPS phase | SpRel, O1–O8 | geometric obstruction; no cascade-exponent bound | P/O |
-| Heisenberg transition | O9–O15 | exact $\hat\delta_{\mathrm{exact}} \approx 4.5$; conditional bound | P/C |
+| Heisenberg transition | O9–O15 | crossover slope $\approx 4.5$, unfolded $\delta_{\mathrm{exact}} = 3$ | P/C |
 | Pair + transfer | O16–O24 | $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}}$ fibre-conditionality closed | C |
 | Numerical + sector | O25–O30 | $\delta_{\mathrm{corr}}$ diagnostic; $r_{\mathrm{eff}} = 3$ finite-data | N/C |
 | SU(3) / colour | O31–O32 | O31 withdrawn; O32 measurements stand | O |

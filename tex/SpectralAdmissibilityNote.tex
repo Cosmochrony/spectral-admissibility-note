@@ -348,7 +348,8 @@ $\chi$ itself.
       \label{sec:heisenberg}
 
       The geometric obstruction of O8 forces a change of arena.
-      The corresponding Heisenberg Cayley graph has polynomial ball growth
+      Set $G_q = \Heis_3(\mathbb{Z}/q\mathbb{Z})$.
+      The Cayley graph $\Cay(G_q, S_q)$ has polynomial ball growth
       $|B_n| \sim C n^4$ (Bass--Guivarc'h theorem, homogeneous dimension $D = 4$), restoring an
       exploitable window whose depth O9 bounds below by $\Omega(q^{1/2})$ BFS steps.
 
@@ -413,7 +414,7 @@ $\chi$ itself.
       fibre and realisation hypotheses stated below.
 
       \textbf{O16}~\cite{Beau2026a20} examines whether conjugate blocks are the fibres of $\Pi$
-      and types the two premises that identification would need, neither derived here.
+      and types the two premises that identification would need, neither derived here (structural).
       Under a further hypothesis, that the conjugate-pair ratio $r(c,q)$ is independent of the
       shell index, the log-log slope of the pair product is exactly double that of $\sigma_c$.
       On the exact block observable of the O12/O13 pipeline the proved conjugate-block identity
@@ -447,9 +448,9 @@ $\chi$ itself.
       rather than a constructed transfer, and reads the O15 bound as an observable-class
       mismatch.
 
-      \textbf{O22}~\cite{Beau2026a26} proves that Born--Infeld projection locking forces
-      $\nobs$ onto a BFS shell of the relevant Cayley graph.
-      Shell alignment is a theorem, not an independent geometric hypothesis.
+      \textbf{O22}~\cite{Beau2026a26} proves a shell-alignment theorem.
+      Born--Infeld projection locking forces $\nobs$ onto a BFS shell of $\Cay(G_q, S_q)$.
+      The alignment is not an independent geometric hypothesis.
 
       \textbf{O23}~\cite{Beau2026a27} determines the status of the complementary question: for a
       supplied irreducible two-dimensional unitary carrier, the traceless neutral sector is
@@ -705,8 +706,8 @@ $\chi$ itself.
       The following results are established as theorems within their stated assumptions.
 
       \begin{enumerate}
-        \item \textit{Admissibility envelope.}\newline
-        SpectralAdmissibility~\cite{Beau2026a1} proves that in the linearised regime
+        \item \textit{Admissibility envelope} (SpectralAdmissibility~\cite{Beau2026a1}):
+        in the linearised regime it proves that
         $A_n^{\max}=\cchi/\sqrt{\lambda_n}$, and the exact one-mode dynamics on $Q_8$ preserves
         the same saturation envelope.
 
@@ -747,8 +748,9 @@ $\chi$ itself.
         \item \textit{Shell-alignment theorem} (O22~\cite{Beau2026a26}): Born--Infeld projection
         locking forces $\nobs \in \mathbb{N}$ as the first element of $L_{\mathrm{BI}} \cap N_q$.
 
-        \item \textit{Adjoint dimension} (O23~\cite{Beau2026a27}): for a supplied
-        irreducible $\mathbb{C}^2$ carrier, $\dim_\mathbb{R} \Im\mathbb{H} = 3$ (Theorem~3.1);
+        \item \textit{Conditional adjoint dimension} (O23~\cite{Beau2026a27}): for a supplied
+        irreducible carrier of complex dimension two,
+        $\dim_\mathbb{R} \Im\mathbb{H} = 3$ (Theorem~3.1);
         the threshold $\Sigma_c(n_3) = 3$ is a supplied selection rule, its carrier-selection
         and $\Sigma_c$-identification bridges being open.
 
@@ -815,6 +817,10 @@ $\chi$ itself.
       The following hold only under premises that the sub-programme does not derive.
 
       \begin{enumerate}
+        \item \textit{The conjugate-pair construction} (O16~\cite{Beau2026a20}): conditional on
+        identifying conjugate blocks as fibres of $\Pi$ and realising the fibre involution as
+        $c \leftrightarrow q-c$; neither premise is derived there.
+
         \item \textit{The $\su(2)$ identification} (O27~\cite{Beau2026a31}, O23~\cite{Beau2026a27}):
         conditional on the identification of the admissible image with the neutral traceless
         sector and on O23's supplied spinor carrier.

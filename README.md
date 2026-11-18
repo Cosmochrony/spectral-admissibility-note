@@ -47,7 +47,7 @@ adjusted. The further step to the cascade exponent is **not** part of the chain:
 the reciprocal prescription
 $\beta^* \approx 1/(\delta_{\mathrm{pair}} + \tfrac{1}{2})$ has no carrier on the
 Heisenberg measurement substrate, and the **Span-Growth Note** proves that the
-expander-derived conversion does not transfer there. The agreement of
+legacy expander-side conversion prescription does not transfer there. The agreement of
 $\beta^* \approx 0.126$ with the phenomenological window
 $\beta^* \in (0.09, 0.13)$, which O3 fixes by matching the charged-lepton
 sector, is a coincidence check, not a derivation.

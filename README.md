@@ -94,7 +94,7 @@ organised into internal phases:
 | Heisenberg transition | O9–O15 | crossover $\approx 4.5$, unfolded $\delta_{\mathrm{exact}}=3$; cond. bound | P/C |
 | Pair + transfer boundary | O16–O24 | $c_{\mathrm{BI}} \to \delta_{\mathrm{pair}}$ fibre-conditionality closed | C |
 | Numerical + sector | O25–O30 | $\delta_{\mathrm{corr}}$ diagnostic; $r_{\mathrm{eff}} = 3$ finite-data | N/C |
-| SU(3) / colour | O31–O32 | O31 withdrawn; O32 measurements stand | N/O |
+| SU(3) / colour | O31–O32 | O31 withdrawn; O32 diagnostic proved colour-blind | P/O |
 | Spectral architecture | O33 | exact doublets and protected sectors, no Standard-Model identification | P |
 | Companion notes | Span-Growth, Critical Coverage | transfer failure; exact depth law | P |
 
@@ -106,11 +106,14 @@ Status codes: **P** = proved, **S** = structural, **N** = numerical,
 Three open deliverables define the current boundary of the sub-programme:
 
 1. **$[\mathrm{H\text{-}color}]$.**
-   Two of its four levels stand, both established in **O32**: block-averaged
-   equality to $O(q^{-1})$ and effective-exponent equality in the $q \to \infty$
-   limit. Sector rank equality and pointwise profile equality rested on the
-   superseded version of **O31**, whose current record is a withdrawal notice and
-   asserts neither; they are open, and no $SU(3)$ identification follows.
+   None of its four levels is established. The block-averaged and
+   effective-exponent levels, attributed to **O32** in earlier versions, are
+   withdrawn: O32 version 2.0 proves that its capacity profile is invariant under
+   scaling of the whole character block by any unit, so its averages are equal for
+   every pair of characters and carry no colour content. Sector rank equality and
+   pointwise profile equality rested on the superseded version of **O31**, whose
+   current record is a withdrawal notice and asserts neither; they are open, and no
+   $SU(3)$ identification follows.
 2. **Spin-$\tfrac{1}{2}$ identification.**
    The carrier is supplied by O23 and selected by O26 minimality; the vector lift
    of O26 Hypothesis 4.4 is open, and no measurement of the sub-programme
@@ -128,7 +131,8 @@ is supplied by O23 and O26 Hypothesis 4.4 is open. The numerical campaign is
 complete at full breadth for $q \in \{29, 61, 101, 151, 211\}$ and extended at
 reduced sampling to $q \in \{307, 401, 601\}$.
 The extension to $SU(3)$ is **open**: O31 version 2.0 withdraws the colour-group
-derivation and every derivation of a gauge factor.
+derivation and every derivation of a gauge factor, and O32 version 2.0 shows that
+its colour-triplet diagnostic cannot test $[\mathrm{H\text{-}color}]$.
 
 ## Build
 

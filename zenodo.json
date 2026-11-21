@@ -5,5 +5,5 @@
   "main_tex": "tex/SpectralAdmissibilityNote.tex",
   "zenodo_id": 20402946,
   "doi": "10.5281/zenodo.20402946",
-  "notes": "Version 2.2.4. Bibliography only: prints the new title of O6 (Matrix-Level Dynamic Redundancy and a Conditional Upper Bound on the Cascade Exponent β) and, where cited, of O5 (Finite Character-Trace Saturation and the Limits of Vertex-Based Class-Function Cascades). No result is changed."
+  "notes": "Version 2.2.4. The O6 entry no longer imports O6's withdrawn q-structural saturation reading or a required next construction: it states O6 2.0's span dimension q², saturation within a few BFS radii without regrowth, and certified ranks. Prints the new titles of O6 (Matrix-Level Dynamic Redundancy and a Conditional Upper Bound on the Cascade Exponent β) and O5 (Finite Character-Trace Saturation and the Limits of Vertex-Based Class-Function Cascades). No other result is changed."
 }

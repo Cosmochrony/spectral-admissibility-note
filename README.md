@@ -106,14 +106,18 @@ Status codes: **P** = proved, **S** = structural, **N** = numerical,
 Three open deliverables define the current boundary of the sub-programme:
 
 1. **$[\mathrm{H\text{-}color}]$.**
-   None of its four levels is established. The block-averaged and
-   effective-exponent levels, attributed to **O32** in earlier versions, are
-   withdrawn: O32 version 2.0 proves that its capacity profile is invariant under
-   scaling of the whole character block by any unit, so its averages are equal for
-   every pair of characters and carry no colour content. Sector rank equality and
-   pointwise profile equality rested on the superseded version of **O31**, whose
-   current record is a withdrawal notice and asserts neither; they are open, and no
-   $SU(3)$ identification follows.
+   None of its four levels is established as a colour statement. **O32** version
+   2.0 proves three statements, none with colour content: (a) the O12 capacity
+   profile of each block is unchanged when the whole block is multiplied by any
+   unit, so the full-block equality across a colour orbit (the earlier "pointwise"
+   level) holds as the case $\lambda=\omega$ without being specific to it; (b)
+   under the campaign sampling law the profile has the same distribution for every
+   character, which replaces the earlier averaged and effective levels by
+   statements valid for every pair of characters; (c) the campaign therefore has no
+   discriminating power for the hypothesis. Sector rank equality, and any
+   colour-specific pointwise reading, rested on the superseded version of **O31**,
+   whose current record is a withdrawal notice and asserts neither; they are open,
+   and no $SU(3)$ identification follows.
 2. **Spin-$\tfrac{1}{2}$ identification.**
    The carrier is supplied by O23 and selected by O26 minimality; the vector lift
    of O26 Hypothesis 4.4 is open, and no measurement of the sub-programme
